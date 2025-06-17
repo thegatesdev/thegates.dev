@@ -46,28 +46,6 @@ ol[role="list"] {
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
 }
 
 input,
