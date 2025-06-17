@@ -7,6 +7,10 @@ export default defineConfig({
   output: "static",
   root: ".",
   scopedStyleStrategy: "where",
+  prefetch: {
+    defaultStrategy: "tap",
+    prefetchAll: true,
+  },
   build: {
     concurrency: 2,
   },
