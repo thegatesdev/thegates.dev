@@ -6,7 +6,7 @@ export default defineConfig({
   trailingSlash: "never",
   output: "static",
   root: ".",
-  scopedStyleStrategy: "where",
+  scopedStyleStrategy: "attribute",
   prefetch: {
     defaultStrategy: "tap",
     prefetchAll: true,
