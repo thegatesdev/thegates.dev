@@ -31,9 +31,7 @@
   },
   "overrides": [
     {
-      "include": [
-        "*.astro"
-      ],
+      "include": ["*.astro"],
       "linter": {
         "rules": {
           "style": {
