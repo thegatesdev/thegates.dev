@@ -15,3 +15,11 @@ import ThemeStore from "./ThemeStore.astro";
     <ThemeStore />
   </body>
 </html>
+
+<style is:global>
+  body {
+    background-color: var(--col-bg);
+    color: var(--col-fg);
+    padding: var(--pad-page) var(--pad-page-side);
+  }
+</style>
