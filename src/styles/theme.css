@@ -1,8 +1,18 @@
 :root,
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   color-scheme: dark;
+
+  --col-fg: #dedee0;
+  --col-bg: #0b0b0d;
+  --col-bg-light: #16161a;
+  --col-link-fg: #7192ff;
+  --col-link-bg: #24233a;
+
+  --space-section: 1.2rem;
+  --space-page: 0.9rem;
+  --space-page-side: 0.3rem;
 }
 
-:root[data-theme='light'] {
+:root[data-theme="light"] {
   color-scheme: light;
 }
