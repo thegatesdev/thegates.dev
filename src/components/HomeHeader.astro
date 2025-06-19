@@ -1,9 +1,21 @@
-<h1 class="homeheader">the&#8203;gates&#8203;dev</h1>
+---
+import GlobalLinks from "./GlobalLinks.astro";
+---
+
+<div class="homeheader">
+  <h1>the&#8203;gates&#8203;dev</h1>
+  <GlobalLinks />
+</div>
 <div class="homeheader-separator"></div>
 
 <style is:global>
   .homeheader {
     padding-bottom: var(--space-page);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
   }
   .homeheader-separator {
     border-bottom: 1px solid var(--col-fg);
