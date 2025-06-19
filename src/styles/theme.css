@@ -4,13 +4,17 @@
 
   --col-fg: #dedee0;
   --col-bg: #0b0b0d;
-  --col-bg-light: #16161a;
+
+  --col-section-bg: #67676a33;
   --col-link-fg: #7192ff;
   --col-link-bg: #24233a;
 
-  --space-section: 1.2rem;
+  --space-section: 0.9rem;
+  --space-section-side: 1.2rem;
   --space-page: 0.9rem;
   --space-page-side: 0.3rem;
+  --space-comp: 0.4rem;
+  --space-comp-side: 0.7rem;
 }
 
 :root[data-theme="light"] {
