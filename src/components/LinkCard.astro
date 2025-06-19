@@ -10,7 +10,7 @@ const {value, ...attrs} = Astro.props;
 ---
 
 <a class="linkcard" title={value} {...attrs}>
-  <span>{value}</span>
+  {value}
   <Icon name="ic:baseline-arrow-right" />
 </a>
 
