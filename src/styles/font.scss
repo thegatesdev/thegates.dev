@@ -30,7 +30,8 @@ h6 {
   text-wrap: balance;
 }
 
-p {
+p,
+a {
   font-size: 1.4rem;
   line-height: 1.6;
 }
@@ -65,4 +66,12 @@ strong {
 
 em {
   font-style: italic;
+}
+
+a {
+  color: var(--col-link-fg);
+
+  &:hover {
+    background-color: var(--col-link-bg);
+  }
 }
