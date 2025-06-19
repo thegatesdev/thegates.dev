@@ -7,12 +7,12 @@ import ThemeStore from "./ThemeStore.astro";
 <html lang="en">
   <head>
     <BaseHead title="thegates.dev" />
-    <Style />
     <slot name="head" />
+    <Style />
+    <ThemeStore />
   </head>
   <body>
     <slot />
-    <ThemeStore />
   </body>
 </html>
 
