@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon/components";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  value: string;
+}
+
+const {value, ...attrs} = Astro.props;
+---
+
+<a class="linkcard" title={value} {...attrs}>
+  <span>{value}</span>
+  <Icon name="ic:baseline-arrow-right" />
+</a>
+
+<style is:global>
+  .linkcard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-comp);
+
+    padding: var(--space-comp) var(--space-comp-side);
+    color: var(--col-fg);
+    text-decoration: none;
+
+    border: 1px solid var(--col-fg);
+    border-radius: 0.1rem;
+
+    --local-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+
+    span {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .linkcard:hover {
+    box-shadow:
+      var(--local-shadow),
+      var(--local-shadow) inset;
+    text-shadow: var(--local-shadow);
+
+    svg {
+
+      filter: drop-shadow(var(--local-shadow));
+    }
+  }
+</style>
