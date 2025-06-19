@@ -11,7 +11,9 @@
     "lint:fix": "biome check --write ."
   },
   "dependencies": {
-    "astro": "^5.9.3"
+    "@iconify-json/ic": "^1.2.2",
+    "astro": "^5.9.3",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
