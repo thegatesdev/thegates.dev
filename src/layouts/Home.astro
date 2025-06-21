@@ -1,0 +1,34 @@
+---
+import Base from "@layouts/Base.astro";
+import Header from "@components/Header.astro";
+import Separator from "@components/Separator.astro";
+import SiteNav from "@components/SiteNav.astro";
+import EmptyPage from "@components/EmptyPage.astro";
+---
+
+<Base>
+  <Header />
+  <Separator />
+  <div class="layout-home">
+    <SiteNav />
+    <Separator vertical />
+    <main class="layout-home-content">
+      <slot>
+        <EmptyPage />
+      </slot>
+    </main>
+  </div>
+</Base>
+
+<style is:global>
+  .layout-home {
+    height: 100%;
+    margin-bottom: var(--space-section-1);
+
+    display: flex;
+    flex-direction: row;
+  }
+  .layout-home-content {
+    flex: 3;
+  }
+</style>

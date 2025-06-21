@@ -45,10 +45,6 @@ ol[role="list"] {
   list-style: none;
 }
 
-html, body {
-  height: 100%;
-}
-
 input,
 button,
 textarea,

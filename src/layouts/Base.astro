@@ -1,7 +1,7 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
-import Style from "./Style.astro";
-import ThemeStore from "./ThemeStore.astro";
+import Style from "@components/Style.astro";
+import ThemeStore from "@components/ThemeStore.astro";
 ---
 
 <html lang="en">
@@ -18,10 +18,15 @@ import ThemeStore from "./ThemeStore.astro";
 
 <style is:global>
   html {
+    height: 100%;
+
     background-color: var(--col-bg);
     color: var(--col-fg);
   }
   body {
+    display: flex;
+    flex-direction: column;
+
     height: 100%;
     width: 80%;
     margin: 0 auto;
