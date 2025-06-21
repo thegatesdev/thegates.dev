@@ -1,0 +1,17 @@
+---
+import LinkCard from "./LinkCard.astro";
+---
+
+<ul class="highlight-links" role="list">
+  <li><LinkCard href="/about" value="About me" /></li>
+  <li><LinkCard href="/software" value="Software projects" /></li>
+  <li><LinkCard href="/art" value="Art gallery" /></li>
+</ul>
+
+<style is:global>
+  .highlight-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-comp-2);
+  }
+</style>
