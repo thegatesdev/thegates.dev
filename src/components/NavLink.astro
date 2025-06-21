@@ -1,0 +1,38 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  currentPage: string;
+  href: string;
+}
+
+const { currentPage, ...attrs } = Astro.props;
+const current = attrs.href === currentPage;
+---
+
+<li>
+  <a class="navlink" aria-current={current ? "page" : "false"} {...attrs}>
+    <slot />
+  </a>
+</li>
+
+<style>
+  .navlink {
+    width: 100%;
+
+    &:hover::before {
+      display: inline-block;
+      content: ">";
+      text-decoration: none;
+    }
+  }
+  .navlink[aria-current="page"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+
+    &::before {
+      content: ">";
+    }
+  }
+</style>

@@ -1,23 +1,19 @@
+---
+import NavLink from "./NavLink.astro";
+
+const currentPage = new URL(Astro.request.url).pathname;
+---
+
 <nav class="site-nav">
   <ol role="list">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About me</a></li>
+    <NavLink {currentPage} href="/">Home</NavLink>
+    <NavLink {currentPage} href="/about">About me</NavLink>
   </ol>
 </nav>
 
 <style is:global>
   .site-nav {
     flex: 1;
-
-    a {
-      width: 100%;
-
-      &:hover::after {
-        display: inline-block;
-        content: ">";
-        text-decoration: none;
-      }
-    }
   }
   @media screen and (max-width: 800px) {
     .site-nav {
