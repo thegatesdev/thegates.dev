@@ -4,9 +4,9 @@
   --col-fg: #dedee0;
   --col-bg: #0b0b0d;
 
-  --col-section-bg: #67676a33;
   --col-link-fg: #7192ff;
   --col-link-bg: #24233a;
+  --col-link-shadow: #dedee0b3;
 
   --space-section-1: 0.9rem;
   --space-section-2: 1.2rem;
@@ -16,4 +16,16 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
+
+  --col-fg: #0b0b0d;
+  --col-bg: #fff;
+
+  --col-link-fg: #002fcb;
+  --col-link-bg: #e0e0ff;
+  --col-link-shadow: transparent;
+
+  --space-section-1: 0.9rem;
+  --space-section-2: 1.2rem;
+  --space-comp-1: 0.4rem;
+  --space-comp-2: 0.7rem;
 }
