@@ -6,7 +6,7 @@ interface Props extends HTMLAttributes<"a"> {
   value: string;
 }
 
-const {value, ...attrs} = Astro.props;
+const { value, ...attrs } = Astro.props;
 ---
 
 <a class="linkcard" title={value} {...attrs}>
@@ -23,6 +23,7 @@ const {value, ...attrs} = Astro.props;
     padding: var(--space-comp-1) var(--space-comp-2);
     color: var(--col-fg);
     text-decoration: none;
+    cursor: pointer;
 
     border: 1px solid var(--col-fg);
     border-radius: 0.1rem;
@@ -42,7 +43,6 @@ const {value, ...attrs} = Astro.props;
     text-shadow: var(--local-shadow);
 
     svg {
-
       filter: drop-shadow(var(--local-shadow));
     }
   }
