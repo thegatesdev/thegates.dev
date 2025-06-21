@@ -64,3 +64,17 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 50%;
+}
+
+th, td {
+  padding: var(--space-comp-1);
+  text-align: left;
+}
