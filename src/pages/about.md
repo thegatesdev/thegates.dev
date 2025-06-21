@@ -6,7 +6,7 @@ layout: '@layouts/Home.astro'
 
 Hello! People usually call me Tim around here. Scarily generic, I know.
 
-I live in The Netherlands, where write code to earn a living, and for fun. My other hobbies include creating art, playing Minecraft and Vintage Story, and making music.
+I live in The Netherlands, where I write code to earn a living, and for fun. My other hobbies include creating art, playing Minecraft and Vintage Story, and making music.
 
 ### Trivia
 
