@@ -1,0 +1,20 @@
+---
+interface Props {
+  vertical?: boolean;
+}
+
+const { vertical = false } = Astro.props;
+---
+
+<div class={vertical ? "vertical" : "horizontal"}></div>
+
+<style is:global>
+  .horizontal {
+    border-top: 1px solid var(--col-fg);
+    margin: var(--space-section-1) 0;
+  }
+  .vertical {
+    border-right: 1px solid var(--col-fg);
+    margin: 0 var(--space-section-1);
+  }
+</style>
