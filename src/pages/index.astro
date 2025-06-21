@@ -1,5 +1,12 @@
 ---
+import HighlightLinks from "@components/HighlightLinks.astro";
 import Home from "@layouts/Home.astro";
 ---
 
-<Home />
+<Home>
+  <p>Welcome to my personal website!</p>
+  <h2>Highlights</h2>
+  <HighlightLinks />
+  <h2>About</h2>
+  <p>This website is made using <a target="_blank" href="https://astro.build">Astro</a>.</p>
+</Home>
