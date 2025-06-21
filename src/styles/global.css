@@ -40,8 +40,14 @@ h6 {
   overflow-wrap: break-word;
 }
 
+ul,
+ol {
+  margin-left: 40px;
+}
+
 ul[role="list"],
 ol[role="list"] {
+  margin: 0;
   list-style: none;
 }
 
