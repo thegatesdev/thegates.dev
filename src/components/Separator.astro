@@ -17,4 +17,12 @@ const { vertical = false } = Astro.props;
     border-right: 1px solid var(--col-fg);
     margin: 0 var(--space-section-1);
   }
+
+  @media screen and (max-width: 800px) {
+    .vertical {
+      border-right: none;
+      border-top: 1px solid var(--col-fg);
+      margin: var(--space-section-1) 0;
+    }
+  }
 </style>

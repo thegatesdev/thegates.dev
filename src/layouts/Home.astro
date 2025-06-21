@@ -31,4 +31,10 @@ import EmptyPage from "@components/EmptyPage.astro";
   .layout-home-content {
     flex: 3;
   }
+  @media screen and (max-width: 800px) {
+    .layout-home {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
 </style>
