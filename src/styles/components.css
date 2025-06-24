@@ -1,0 +1,14 @@
+@layer components {
+  a {
+    display: inline-block;
+  }
+
+  a[href]:hover {
+    background-color: var(--col-link-bg);
+  }
+
+  a:not([href]) {
+    cursor: not-allowed;
+    background-color: var(--col);
+  }
+}
