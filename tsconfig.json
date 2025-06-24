@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "sourceMap": true,
     "paths": {
-      "@components/*": ["src/components/*"],
+      "@parts/*": ["src/parts/*"],
       "@content/*": ["src/content/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
