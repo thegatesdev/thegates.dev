@@ -11,12 +11,58 @@
   a[href] {
     &:hover,
     &:focus-visible {
-    background-color: var(--col-link-bg);
+      background-color: var(--col-link-bg);
     }
   }
 
   a:not([href]) {
     cursor: not-allowed;
     text-decoration: line-through;
+  }
+
+  .link-card {
+    padding: var(--space-comp-2) var(--space-comp-3);
+    text-decoration: none;
+    color: var(--col-fg-fade-1);
+
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      border: 2px solid;
+      border-radius: var(--radius-1);
+    }
+
+    &[href] {
+      &:hover,
+      &:focus-visible {
+        transition: 50ms ease-out;
+        transition-property: color;
+        color: var(--col-fg-active);
+
+        &::before {
+          transition: 50ms ease-out, 200ms;
+          transition-property: transform, background-color;
+          background-color: var(--col-bg-fade-1);
+        }
+
+        &:nth-child(even)::before {
+          transform: scale(110%) rotate(-2deg);
+        }
+
+        &:nth-child(odd)::before {
+          transform: scale(110%) rotate(2deg);
+        }
+      }
+    }
   }
 }
