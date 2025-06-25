@@ -6,9 +6,9 @@
     "baseUrl": ".",
     "sourceMap": true,
     "paths": {
-      "@parts/*": ["src/parts/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
+      "@parts/*": ["src/parts/*"],
       "@styles/*": ["src/styles/*"]
     }
   }
