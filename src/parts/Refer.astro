@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
+  icon?: string;
+}
+
+const { icon, ...attrs } = Astro.props;
+---
+
+<a class="refer" {...attrs}>
+  {icon && <Icon name={icon} />}
+  <b><slot /></b>
+</a>
+
+<style is:global>
+  .refer {
+    display: flex;
+    line-height: 0.9;
+    gap: var(--space-comp-1);
+    padding: var(--space-comp-1);
+
+    color: var(--col-fg);
+  }
+</style>
