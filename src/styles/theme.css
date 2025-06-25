@@ -10,10 +10,12 @@
     --col-link-bg: #24233a;
     --col-link-shadow: #dedee0b3;
 
+    --radius-1: 4px;
     --space-section-1: 0.9rem;
     --space-section-2: 1.2rem;
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
+    --space-comp-3: 1rem;
   }
 
   :root[data-theme="light"] {
@@ -27,9 +29,11 @@
     --col-link-bg: #e0e0ff;
     --col-link-shadow: transparent;
 
+    --radius-1: 4px;
     --space-section-1: 0.9rem;
     --space-section-2: 1.2rem;
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
+    --space-comp-3: 1rem;
   }
 }
