@@ -1,7 +1,32 @@
 ---
 import Base from "@layouts/Base.astro";
+import Refer from "@parts/Refer.astro";
 ---
 
 <Base>
-  <h1>thegatesdev</h1>
+  <main class="stack-spaced">
+    <nav>
+      <ul role="list" class="stack-row-center">
+        <li>
+          <Refer href="https://github.com/thegatesdev" icon="simple-icons:github">
+            GitHub
+          </Refer>
+        </li>
+        <li>
+          <Refer href="https://www.youtube.com/@thegatesdev" icon="simple-icons:youtube">
+            YouTube
+          </Refer>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1 class="title">Tim</h1>
+      <h2>@thegatesdev</h2>
+      <nav></nav>
+    </header>
+    <footer>
+      <p>Built with <a href="https://astro.build">Astro</a>!</p>
+      <a href="https://github.com/thegatesdev/thegates.dev">View the source</a>
+    </footer>
+  </main>
 </Base>
