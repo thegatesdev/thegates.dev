@@ -3,8 +3,10 @@
     color-scheme: dark;
 
     --col-fg: #dedee0;
+    --col-fg-active: #fff;
     --col-fg-fade-1: #c0c0c2;
     --col-bg: #0b0b0d;
+    --col-bg-fade-1: #29292b;
 
     --col-link-fg: #7192ff;
     --col-link-bg: #24233a;
@@ -22,8 +24,10 @@
     color-scheme: light;
 
     --col-fg: #0b0b0d;
+    --col-fg-active: #000;
     --col-fg-fade-1: #29292b;
     --col-bg: #fff;
+    --col-bg-fade-1: #e1e1e1;
 
     --col-link-fg: #002fcb;
     --col-link-bg: #e0e0ff;
