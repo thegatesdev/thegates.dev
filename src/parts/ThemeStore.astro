@@ -1,4 +1,4 @@
 <script is:inline>
-  document.documentElement.dataset.theme =
-    localStorage?.getItem("theme") ?? undefined;
+  const storedTheme = localStorage?.getItem("theme");
+  if (storedTheme != null) document.documentElement.dataset.theme = storedTheme;
 </script>
