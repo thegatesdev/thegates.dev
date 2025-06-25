@@ -1,25 +1,4 @@
 @layer components {
-  a {
-    color: var(--col-link-fg);
-    display: inline-block;
-  }
-
-  a:visited {
-    color: var(--col-link-fg-visit);
-  }
-
-  a[href] {
-    &:hover,
-    &:focus-visible {
-      background-color: var(--col-link-bg);
-    }
-  }
-
-  a:not([href]) {
-    cursor: not-allowed;
-    text-decoration: line-through;
-  }
-
   .link-card {
     padding: var(--space-comp-2) var(--space-comp-3);
     text-decoration: none;

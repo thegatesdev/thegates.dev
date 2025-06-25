@@ -1,0 +1,19 @@
+@layer base {
+  a {
+    color: var(--col-link-fg);
+    display: inline-block;
+  }
+
+  a:visited {
+    color: var(--col-link-fg-visit);
+  }
+
+  a[href]:hover, a[href]:focus-visible {
+    background-color: var(--col-link-bg);
+  }
+
+  a:not([href]) {
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+}
