@@ -1,0 +1,25 @@
+@layer composition {
+  .stack-three {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    >:first-child, >:nth-child(3) {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    >:nth-child(3) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .stack-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
