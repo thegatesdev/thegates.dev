@@ -3,6 +3,7 @@
     color-scheme: dark;
 
     --col-fg: #dedee0;
+    --col-fg-fade: #c0c0c2;
     --col-bg: #0b0b0d;
 
     --col-link-fg: #7192ff;
@@ -19,6 +20,7 @@
     color-scheme: light;
 
     --col-fg: #0b0b0d;
+    --col-fg-fade: #29292b;
     --col-bg: #fff;
 
     --col-link-fg: #002fcb;
