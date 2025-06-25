@@ -9,6 +9,7 @@
     --col-bg-fade-1: #29292b;
 
     --col-link-fg: #7192ff;
+    --col-link-fg-visit: #7cb1d2;
     --col-link-bg: #24233a;
     --col-link-shadow: #dedee0b3;
 
@@ -29,8 +30,9 @@
     --col-bg: #fff;
     --col-bg-fade-1: #e1e1e1;
 
-    --col-link-fg: #002fcb;
-    --col-link-bg: #e0e0ff;
+    --col-link-fg: #1a4cff;
+    --col-link-fg-visit: #0f2dd2;
+    --col-link-bg: #e0ecff;
     --col-link-shadow: transparent;
 
     --radius-1: 4px;
