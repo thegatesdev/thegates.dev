@@ -1,7 +1,7 @@
 <script is:inline>
-document.documentElement.dataset.theme =
-  localStorage?.getItem("theme") ??
-  (window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light");
+  document.documentElement.dataset.theme =
+    localStorage?.getItem("theme") ??
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
 </script>

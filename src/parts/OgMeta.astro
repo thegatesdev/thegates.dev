@@ -9,15 +9,8 @@ interface Props {
   siteName: string;
 }
 
-const {
-  title,
-  description,
-  type,
-  url,
-  image,
-  imageAlt,
-  siteName,
-} = Astro.props;
+const { title, description, type, url, image, imageAlt, siteName } =
+  Astro.props;
 ---
 
 <meta property="og:description" name="description" content={description} />
