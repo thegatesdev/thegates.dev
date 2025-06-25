@@ -13,4 +13,8 @@
     flex-direction: row;
     justify-content: center;
   }
+
+  .stack > * + * {
+    margin-top: var(--space-section-2);
+  }
 }
