@@ -8,8 +8,11 @@
     color: var(--col-link-fg-visit);
   }
 
-  a[href]:hover {
+  a[href] {
+    &:hover,
+    &:focus-visible {
     background-color: var(--col-link-bg);
+    }
   }
 
   a:not([href]) {
