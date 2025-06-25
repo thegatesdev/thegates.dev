@@ -1,6 +1,11 @@
 @layer components {
   a {
+    color: var(--col-link-fg);
     display: inline-block;
+  }
+
+  a:visited {
+    color: var(--col-link-fg-visit);
   }
 
   a[href]:hover {
@@ -9,6 +14,6 @@
 
   a:not([href]) {
     cursor: not-allowed;
-    background-color: var(--col);
+    text-decoration: line-through;
   }
 }
