@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    &.gap {
+      gap: var(--space-section-1);
+    }
   }
 
   .stack > * + * {
