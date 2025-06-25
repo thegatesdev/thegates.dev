@@ -9,7 +9,6 @@ export default defineConfig({
   root: ".",
   scopedStyleStrategy: "attribute",
   prefetch: {
-    defaultStrategy: "tap",
     prefetchAll: true,
   },
   build: {
