@@ -1,7 +1,6 @@
 @layer components {
   .link-card {
     padding: var(--space-comp-2) var(--space-comp-3);
-    text-decoration: none;
     color: var(--col-fg-fade-1);
 
     position: relative;
@@ -22,6 +21,8 @@
     }
 
     &[href] {
+      text-decoration: none;
+
       &:hover,
       &:focus-visible {
         transition: 50ms ease-out;
