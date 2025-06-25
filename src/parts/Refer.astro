@@ -6,10 +6,10 @@ interface Props extends HTMLAttributes<"a"> {
   icon?: string;
 }
 
-const { icon, ...attrs } = Astro.props;
+const { icon, target = "_blank", ...attrs } = Astro.props;
 ---
 
-<a class="refer" {...attrs}>
+<a class="refer" target={target} {...attrs}>
   {icon && <Icon name={icon} />}
   <b><slot /></b>
 </a>
