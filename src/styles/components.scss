@@ -69,5 +69,9 @@
       background-color: var(--col-bg-fade-1);
       pointer-events: none;
     }
+
+    &:not([href]) {
+      color: var(--col-fg-fade-2);
+    }
   }
 }
