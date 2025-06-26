@@ -1,0 +1,27 @@
+---
+interface Props {
+  published: Date;
+  updated: Date | undefined;
+}
+
+const { published, updated } = Astro.props;
+---
+
+<small class="stack-row gap">
+  <span>
+    Published:{" "}
+    <time datetime={published.toISOString()}>
+      {published.toLocaleDateString()}
+    </time>
+  </span>
+  {
+    updated && (
+      <span>
+        Updated:{" "}
+        <time datetime={published.toISOString()}>
+          {published.toLocaleDateString()}
+        </time>
+      </span>
+    )
+  }
+</small>
