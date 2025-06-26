@@ -16,4 +16,8 @@
     cursor: not-allowed;
     text-decoration: line-through;
   }
+
+  small {
+    color: var(--col-fg-fade-2);
+  }
 }
