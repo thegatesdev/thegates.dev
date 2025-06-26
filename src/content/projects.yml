@@ -1,0 +1,11 @@
+- id: thegates.dev
+  title: This website
+  description: My public website.
+  started: 2025-06-17
+  url: https://github.com/thegatesdev/thegates.dev
+- id: maple
+  title: Maple
+  description: A clean, type safe intermediary structure.
+  started: 2024-01-17
+  ended: 2024-07-11
+  url: https://github.com/thegatesdev/maple
