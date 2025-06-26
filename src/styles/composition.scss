@@ -8,14 +8,16 @@
     text-align: center;
   }
 
-  .stack-row-center {
+  .stack-row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap;
 
     &.gap {
       gap: var(--space-section-1);
+    }
+    &.center {
+      justify-content: center;
     }
   }
 
