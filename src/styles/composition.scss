@@ -19,7 +19,14 @@
     }
   }
 
-  .stack > * + * {
-    margin-top: var(--space-section-2);
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-section-2);
+  }
+
+  .compress {
+    width: 40%;
+    margin: 0 auto;
   }
 }
