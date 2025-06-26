@@ -7,8 +7,11 @@
     position: relative;
     z-index: 1;
 
+    --widen: 105%;
+
     &.big {
       padding: var(--space-comp-2) var(--space-comp-4);
+      --widen: 101%;
     }
 
     &::before {
@@ -38,7 +41,7 @@
           transition: 50ms ease-out, 50ms, 200ms;
           transition-property: scale, rotate, background-color;
           background-color: var(--col-bg-fade-1);
-          scale: 105%;
+          scale: var(--widen);
         }
 
         &.rotate {
