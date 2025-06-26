@@ -10,6 +10,13 @@
 
     --widen: 105%;
 
+    &.row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-comp-1);
+    }
+
     &.big {
       padding: var(--space-comp-3) var(--space-comp-4);
       --widen: 101%;
