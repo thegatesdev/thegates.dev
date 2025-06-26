@@ -4,4 +4,9 @@
       width: 80%;
     }
   }
+  @media screen and (width <= 600px) {
+    .compress {
+      width: 95%;
+    }
+  }
 }
