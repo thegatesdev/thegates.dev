@@ -12,8 +12,10 @@ const articles = await getCollection("article");
     articles.map(({ id, data: { title, description, published, updated } }) => (
       <article>
         <a href={`/articles/${id}`} class="card big wide stack">
-          <h1>{title}</h1>
-          <PostTime {published} {updated} />
+          <span>
+            <h1>{title}</h1>
+            <PostTime {published} {updated} />
+          </span>
           <p>{description}</p>
         </a>
       </article>
