@@ -36,11 +36,11 @@
         }
 
         &:nth-child(even)::before {
-          transform: scale(110%) rotate(-2deg);
+          transform: scale(110%) rotate(2deg);
         }
 
         &:nth-child(odd)::before {
-          transform: scale(110%) rotate(2deg);
+          transform: scale(110%) rotate(-2deg);
         }
       }
     }
