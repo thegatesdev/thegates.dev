@@ -9,7 +9,7 @@ interface Props extends HTMLAttributes<"a"> {
 const {icon, ...attrs} = Astro.props;
 ---
 
-<a class="card row" {...attrs}>
+<a class="card row" target="_blank" {...attrs}>
   <b><slot /></b>
   {icon && <Icon name={icon} />}
 </a>
