@@ -20,4 +20,8 @@
   small {
     color: var(--col-fg-fade-2);
   }
+
+  i {
+    color: var(--col-fg-fade-3);
+  }
 }
