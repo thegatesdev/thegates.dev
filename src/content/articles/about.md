@@ -2,6 +2,7 @@
 title: About
 description: Who I am, and what I do.
 published: 2025-06-26
+updated: 2025-06-26
 order: 0
 ---
 Hello! People usually call me Tim around here. Scarily generic, I know.
@@ -9,10 +10,6 @@ Hello! People usually call me Tim around here. Scarily generic, I know.
 I live in The Netherlands, where I write code for a living, and for fun.
 I'm also **studying** for software developer in Amsterdam.
 In my free time I like to **code**, play **Minecraft**, practice **digital drawing** and learn **Japanese**.
-
-## This website
-
-This website is all about my digital presence. If you would like to contact me in real life, check out the [contact page](/articles/me).
 
 ## Trivia
 
