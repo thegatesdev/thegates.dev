@@ -19,6 +19,7 @@
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
     --space-comp-3: 1rem;
+    --space-comp-4: 1.3rem;
   }
 
   :root[data-theme="light"] {
@@ -41,5 +42,6 @@
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
     --space-comp-3: 1rem;
+    --space-comp-4: 1.3rem;
   }
 }

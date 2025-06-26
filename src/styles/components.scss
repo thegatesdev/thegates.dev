@@ -7,6 +7,10 @@
     position: relative;
     z-index: 1;
 
+    &.big {
+      padding: var(--space-comp-2) var(--space-comp-4);
+    }
+
     &::before {
       pointer-events: none;
       content: "";
