@@ -1,5 +1,6 @@
 ---
 import Home from "@layouts/Home.astro";
+import PostTime from "@parts/PostTime.astro";
 import { getCollection } from "astro:content";
 
 const articles = await getCollection("article");
@@ -9,28 +10,13 @@ const articles = await getCollection("article");
   <h1 class="title">Articles</h1>
   {
     articles.map(({ id, data: { title, description, published, updated } }) => (
-      <a href={`/articles/${id}`} class="card big wide">
-        <article class="stack">
+      <article>
+        <a href={`/articles/${id}`} class="card big wide stack">
           <h1>{title}</h1>
-          <small class="stack-row gap">
-            <span>
-              Published:{" "}
-              <time datetime={published.toISOString()}>
-                {published.toLocaleDateString()}
-              </time>
-            </span>
-            {updated && (
-              <span>
-                Updated:{" "}
-                <time datetime={published.toISOString()}>
-                  {published.toLocaleDateString()}
-                </time>
-              </span>
-            )}
-          </small>
+          <PostTime {published} {updated} />
           <p>{description}</p>
-        </article>
-      </a>
+        </a>
+      </article>
     ))
   }
 </Home>
