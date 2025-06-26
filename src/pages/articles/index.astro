@@ -1,6 +1,6 @@
 ---
 import Home from "@layouts/Home.astro";
-import PostTime from "@parts/PostTime.astro";
+import PageInfo from "@parts/PageInfo.astro";
 import { getCollection } from "astro:content";
 
 const articles = await getCollection("article");
@@ -14,7 +14,7 @@ const articles = await getCollection("article");
         <a href={`/articles/${id}`} class="card big wide stack">
           <span>
             <h1>{title}</h1>
-            <PostTime {published} {updated} />
+            <PageInfo {published} {updated} />
           </span>
           <p>{description}</p>
         </a>
