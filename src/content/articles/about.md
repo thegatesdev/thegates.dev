@@ -12,7 +12,7 @@ In my free time I like to **code**, play **Minecraft**, practice **digital drawi
 
 ## This website
 
-This website is all about my digital presence. If you would like to contact me in real life, check out the [contact page](./me).
+This website is all about my digital presence. If you would like to contact me in real life, check out the [contact page](/articles/me).
 
 ## Trivia
 
