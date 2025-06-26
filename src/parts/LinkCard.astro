@@ -10,6 +10,6 @@ const {icon, ...attrs} = Astro.props;
 ---
 
 <a class="card row" {...attrs}>
-  <slot />
+  <b><slot /></b>
   {icon && <Icon name={icon} />}
 </a>
