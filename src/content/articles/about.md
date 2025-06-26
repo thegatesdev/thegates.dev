@@ -2,6 +2,7 @@
 title: About
 description: Explains who I am and what I do.
 published: 2025-06-26
+order: 0
 ---
 Hello! People usually call me Tim around here. Scarily generic, I know.
 

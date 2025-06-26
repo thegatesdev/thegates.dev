@@ -3,7 +3,9 @@ import Home from "@layouts/Home.astro";
 import PageInfo from "@parts/PageInfo.astro";
 import { getCollection } from "astro:content";
 
-const articles = await getCollection("article");
+const articles = (await getCollection("article")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <Home>
