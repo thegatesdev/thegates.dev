@@ -1,0 +1,7 @@
+@layer screens {
+  @media screen and (width <= 800px) {
+    .compress {
+      width: 80%;
+    }
+  }
+}
