@@ -1,6 +1,6 @@
 ---
 title: About
-description: Explains who I am and what I do.
+description: Who I am, and what I do.
 published: 2025-06-26
 order: 0
 ---
