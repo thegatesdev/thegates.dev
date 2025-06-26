@@ -31,19 +31,35 @@
         color: var(--col-fg-active);
 
         &::before {
-          transition: 50ms ease-out, 200ms;
-          transition-property: transform, background-color;
+          transition: 50ms ease-out, 50ms, 200ms;
+          transition-property: scale, rotate, background-color;
           background-color: var(--col-bg-fade-1);
+          scale: 105%;
         }
 
-        &:nth-child(even)::before {
-          transform: scale(110%) rotate(2deg);
-        }
+        &.rotate {
+          &:nth-child(even)::before {
+            rotate: 2deg;
+          }
 
-        &:nth-child(odd)::before {
-          transform: scale(110%) rotate(-2deg);
+          &:nth-child(odd)::before {
+            rotate: -2deg;
+          }
         }
       }
+    }
+  }
+
+  .section-link {
+    padding: var(--space-comp-1) var(--space-comp-2);
+    color: var(--col-fg);
+    font-size: 1.3rem;
+    line-height: 1;
+
+    &[aria-current="page"] {
+      text-decoration: none;
+      background-color: var(--col-bg-fade-1);
+      pointer-events: none;
     }
   }
 }
