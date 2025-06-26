@@ -24,4 +24,8 @@
   i {
     color: var(--col-fg-fade-3);
   }
+
+  code {
+    background-color: var(--col-bg-fade-1);
+  }
 }
