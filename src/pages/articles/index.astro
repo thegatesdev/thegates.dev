@@ -8,7 +8,7 @@ const articles = (await getCollection("article")).sort(
 );
 ---
 
-<Home>
+<Home title="Articles | thegates.dev" description="View a list of articles by thegatesdev">
   <h1 class="title">Articles</h1>
   {
     articles.map(({ id, data: { title, description, published, updated, order } }) => (

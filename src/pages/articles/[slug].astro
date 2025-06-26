@@ -14,10 +14,10 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await render(article);
-const { title, published, updated, order } = article.data;
+const { title, description, published, updated, order } = article.data;
 ---
 
-<Home>
+<Home title={`${title} | thegates.dev`} {description}>
   <h1><i>#{order}</i> {title}</h1>
   <PageInfo {published} {updated}>Article</PageInfo>
   <Content />

@@ -1,9 +1,13 @@
 ---
 import Navigation from "@parts/Navigation.astro";
 import Base from "./Base.astro";
+import type { ComponentProps } from "astro/types";
+
+type Props = ComponentProps<typeof Base>;
+const props = Astro.props;
 ---
 
-<Base>
+<Base {...props}>
   <Navigation />
   <main class="stack compress">
     <slot />
