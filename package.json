@@ -11,6 +11,7 @@
     "lint:fix": "biome check --write ."
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
     "@iconify-json/ic": "^1.2.2",
     "@iconify-json/simple-icons": "^1.2.40",
     "astro": "^5.9.3",
