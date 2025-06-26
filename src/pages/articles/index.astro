@@ -11,11 +11,11 @@ const articles = (await getCollection("article")).sort(
 <Home>
   <h1 class="title">Articles</h1>
   {
-    articles.map(({ id, data: { title, description, published, updated } }) => (
+    articles.map(({ id, data: { title, description, published, updated, order } }) => (
       <article>
         <a href={`/articles/${id}`} class="card big wide stack">
           <span>
-            <h1>{title}</h1>
+            <h1><i>#{order}</i> {title}</h1>
             <PageInfo {published} {updated} />
           </span>
           <p>{description}</p>
