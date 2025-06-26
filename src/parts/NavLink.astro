@@ -1,0 +1,11 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+type Props = HTMLAttributes<"a">;
+
+const { href, ...attrs } = Astro.props;
+const { pathname } = Astro.url;
+const current = pathname === href ? "page" : "false";
+---
+
+<li><a href={href} aria-current={current} {...attrs}><slot /></a></li>
