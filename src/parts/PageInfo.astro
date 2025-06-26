@@ -8,6 +8,7 @@ const { published, updated } = Astro.props;
 ---
 
 <small class="stack-row gap">
+  <slot />
   <span>
     Published:{" "}
     <time datetime={published.toISOString()}>

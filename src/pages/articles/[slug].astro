@@ -1,6 +1,6 @@
 ---
 import Home from "@layouts/Home.astro";
-import PostTime from "@parts/PostTime.astro";
+import PageInfo from "@parts/PageInfo.astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 
@@ -19,6 +19,6 @@ const { title, published, updated } = article.data;
 
 <Home>
   <h1>{title}</h1>
-  <PostTime {published} {updated} />
+  <PageInfo {published} {updated}>Article</PageInfo>
   <Content />
 </Home>
