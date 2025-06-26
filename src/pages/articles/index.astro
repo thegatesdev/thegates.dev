@@ -1,17 +1,36 @@
 ---
 import Home from "@layouts/Home.astro";
+import { getCollection } from "astro:content";
+
+const articles = await getCollection("article");
 ---
 
 <Home>
   <h1 class="title">Articles</h1>
-  <a href="" class="card big wide">
-    <article class="stack">
-      <h1>About me</h1>
-      <small class="stack-row gap">
-        <p>Created: Today</p>
-        <p>Updated: Today</p>
-      </small>
-      <p>Description about me thing thing</p>
-    </article>
-  </a>
+  {
+    articles.map(({ id, data: { title, description, published, updated } }) => (
+      <a href={`/articles/${id}`} class="card big wide">
+        <article class="stack">
+          <h1>{title}</h1>
+          <small class="stack-row gap">
+            <span>
+              Published:{" "}
+              <time datetime={published.toISOString()}>
+                {published.toLocaleDateString()}
+              </time>
+            </span>
+            {updated && (
+              <span>
+                Updated:{" "}
+                <time datetime={published.toISOString()}>
+                  {published.toLocaleDateString()}
+                </time>
+              </span>
+            )}
+          </small>
+          <p>{description}</p>
+        </article>
+      </a>
+    ))
+  }
 </Home>
