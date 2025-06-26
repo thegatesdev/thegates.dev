@@ -1,0 +1,5 @@
+@layer util {
+  .wide {
+    width: 100%;
+  }
+}
