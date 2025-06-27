@@ -1,26 +1,17 @@
 ---
 import Home from "@layouts/Home.astro";
-import Info from "./_Info.astro";
 import { getCollection } from "astro:content";
+import Card from "./_Card.astro";
 
 const articles = (await getCollection("article")).sort(
   (a, b) => a.data.order - b.data.order,
 );
 ---
 
-<Home title="Articles | thegates.dev" description="View a list of articles by thegatesdev">
+<Home
+  title="Articles | thegates.dev"
+  description="View a list of articles by thegatesdev"
+>
   <h1 class="title">Articles</h1>
-  {
-    articles.map(({ id, data: { title, description, published, updated, order } }) => (
-      <article>
-        <a href={`/articles/${id}`} class="card big wide stack">
-          <span>
-            <h1><i>#{order}</i> {title}</h1>
-            <Info {published} {updated} />
-          </span>
-          <p>{description}</p>
-        </a>
-      </article>
-    ))
-  }
+  {articles.map((article) => <Card {...article} />)}
 </Home>

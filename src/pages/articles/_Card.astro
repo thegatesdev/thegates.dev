@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Info from "./_Info.astro";
+
+type Props = CollectionEntry<"article">;
+
+const { id, data } = Astro.props;
+const { title, description, published, updated, order } = data;
+---
+
+<article>
+  <a href={`/articles/${id}`} class="card big wide stack">
+    <span>
+      <h1><i>#{order}</i> {title}</h1>
+      <Info {published} {updated} />
+    </span>
+    <p>{description}</p>
+  </a>
+</article>
