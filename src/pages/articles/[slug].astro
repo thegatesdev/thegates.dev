@@ -1,6 +1,6 @@
 ---
 import Home from "@layouts/Home.astro";
-import PageInfo from "@parts/PageInfo.astro";
+import Info from "./_Info.astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 
@@ -19,6 +19,6 @@ const { title, description, published, updated, order } = article.data;
 
 <Home title={`${title} | thegates.dev`} {description}>
   <h1><i>#{order}</i> {title}</h1>
-  <PageInfo {published} {updated}>Article</PageInfo>
+  <Info {published} {updated}>Article</Info>
   <Content />
 </Home>

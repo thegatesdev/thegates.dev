@@ -1,6 +1,6 @@
 ---
 import Home from "@layouts/Home.astro";
-import PageInfo from "@parts/PageInfo.astro";
+import Info from "./_Info.astro";
 import { getCollection } from "astro:content";
 
 const articles = (await getCollection("article")).sort(
@@ -16,7 +16,7 @@ const articles = (await getCollection("article")).sort(
         <a href={`/articles/${id}`} class="card big wide stack">
           <span>
             <h1><i>#{order}</i> {title}</h1>
-            <PageInfo {published} {updated} />
+            <Info {published} {updated} />
           </span>
           <p>{description}</p>
         </a>
