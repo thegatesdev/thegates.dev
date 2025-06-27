@@ -11,5 +11,6 @@ const projects = await getCollection("project");
   description="View a list of projects by thegatesdev"
 >
   <h1 class="title">Projects</h1>
+  <p>These are just the highlights! For more, check out my GitHub profile.</p>
   {projects.map((project) => <Card {...project} />)}
 </Home>
