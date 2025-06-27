@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
 type Props = CollectionEntry<"project">;
 
 const { data } = Astro.props;
-const { title, description, url, started, ended } = data;
+const { title, description, languages, framework, url, started, ended } = data;
 ---
 
 <article>
@@ -14,7 +14,7 @@ const { title, description, url, started, ended } = data;
     <div class="stack">
       <span>
         <h1>{title}</h1>
-        <Info {started} {ended} />
+        <Info {started} {ended} {languages} {framework} />
       </span>
       <p>{description}</p>
     </div>

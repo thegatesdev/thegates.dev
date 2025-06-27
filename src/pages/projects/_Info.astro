@@ -2,13 +2,23 @@
 interface Props {
   started: Date;
   ended: Date | undefined;
+  languages: string | undefined;
+  framework: string | undefined;
 }
 
-const { started, ended } = Astro.props;
+const { started, ended, languages, framework } = Astro.props;
+
+let builtText = "Built with ";
+if (framework != null) {
+  builtText += `${framework}`;
+  if (languages != null) builtText += " - ";
+}
+if (languages != null) builtText += languages;
 ---
 
 <small class="stack-row gap">
   <slot />
+  {(framework || languages) && <span>{builtText}</span>}
   <span>
     Started:
     <time datetime={started.toISOString()}>
@@ -19,9 +29,7 @@ const { started, ended } = Astro.props;
     ended && (
       <span>
         Ended:
-        <time datetime={ended.toISOString()}>
-          {ended.toLocaleDateString()}
-        </time>
+        <time datetime={ended.toISOString()}>{ended.toLocaleDateString()}</time>
       </span>
     )
   }

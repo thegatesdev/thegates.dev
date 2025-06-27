@@ -18,6 +18,8 @@ const project = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    framework: z.string().optional(),
+    languages: z.string().optional(),
     started: z.date(),
     ended: z.date().optional(),
     url: z.string().url(),
