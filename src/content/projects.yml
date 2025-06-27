@@ -12,3 +12,16 @@
   started: 2024-01-17
   ended: 2024-07-11
   url: https://github.com/thegatesdev/maple
+- id: dotfiles
+  title: NixOS Dotfiles
+  description: My Dotfiles as a Nix flake.
+  languages: Nix
+  started: 2024-09-12
+  url: https://github.com/thegatesdev/dotfiles
+- id: check-in-a-bit
+  title: check-in-a-bit
+  description: BitAcademy Technical Test Project
+  framework: Astro & Svelte
+  started: 2025-04-08
+  ended: 2025-04-29
+  url: https://github.com/thegatesdev/check-in-a-bit
