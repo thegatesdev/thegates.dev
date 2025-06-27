@@ -19,6 +19,11 @@
     &.center {
       justify-content: center;
     }
+    &.sides {
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
   }
 
   .stack {
