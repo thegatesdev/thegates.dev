@@ -1,0 +1,28 @@
+---
+interface Props {
+  started: Date;
+  ended: Date | undefined;
+}
+
+const { started, ended } = Astro.props;
+---
+
+<small class="stack-row gap">
+  <slot />
+  <span>
+    Started:
+    <time datetime={started.toISOString()}>
+      {started.toLocaleDateString()}
+    </time>
+  </span>
+  {
+    ended && (
+      <span>
+        Ended:
+        <time datetime={ended.toISOString()}>
+          {ended.toLocaleDateString()}
+        </time>
+      </span>
+    )
+  }
+</small>

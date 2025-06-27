@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Info from "./_Info.astro";
+import { Icon } from "astro-icon/components";
+
+type Props = CollectionEntry<"project">;
+
+const { data } = Astro.props;
+const { title, description, url, started, ended } = data;
+---
+
+<article>
+  <a href={url} target="_blank" class="card big wide stack-row gap sides">
+    <div class="stack">
+      <span>
+        <h1>{title}</h1>
+        <Info {started} {ended} />
+      </span>
+      <p>{description}</p>
+    </div>
+    <h3><Icon name="simple-icons:github" /></h3>
+  </a>
+</article>

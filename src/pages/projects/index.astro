@@ -1,0 +1,15 @@
+---
+import Home from "@layouts/Home.astro";
+import { getCollection } from "astro:content";
+import Card from "./_Card.astro";
+
+const projects = await getCollection("project");
+---
+
+<Home
+  title="Projects | thegates.dev"
+  description="View a list of projects by thegatesdev"
+>
+  <h1 class="title">Projects</h1>
+  {projects.map((project) => <Card {...project} />)}
+</Home>
