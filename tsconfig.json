@@ -6,7 +6,7 @@
     "baseUrl": ".",
     "sourceMap": true,
     "paths": {
-      "$img/*": ["src/images/*"],
+      "$icon/*": ["src/media/icons/*"],
       "$comp/*": ["src/modules/components/*"],
       "$layout/*": ["src/modules/layouts/*"],
       "$part/*": ["src/modules/parts/*"],
