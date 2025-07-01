@@ -8,7 +8,8 @@
     --col-fg-fade-2: #a2a2a4;
     --col-fg-fade-3: #48484a;
     --col-bg: #0b0b0d;
-    --col-bg-fade-1: #29292b;
+    --col-bg-fade-1: #151517;
+    --col-bg-fade-2: #29292b;
 
     --col-link-fg: #7192ff;
     --col-link-fg-visit: #7cb1d2;
@@ -30,10 +31,11 @@
     --col-fg: #0b0b0d;
     --col-fg-active: #000;
     --col-fg-fade-1: #29292b;
-    --col-fg-fade-2:#474749;
-    --col-fg-fade-3:#a1a1a3;
+    --col-fg-fade-2: #474749;
+    --col-fg-fade-3: #a1a1a3;
     --col-bg: #fff;
-    --col-bg-fade-1: #e1e1e1;
+    --col-bg-fade-1: #d3d3d5;
+    --col-bg-fade-2: #b4b4b6;
 
     --col-link-fg: #1a4cff;
     --col-link-fg-visit: #0f2dd2;
@@ -47,5 +49,9 @@
     --space-comp-2: 0.7rem;
     --space-comp-3: 1rem;
     --space-comp-4: 1.3rem;
+  }
+
+  :root {
+    --page-bg: radial-gradient(var(--col-bg-fade-1) 0%, var(--col-bg) 100%);
   }
 }

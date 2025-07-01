@@ -4,7 +4,8 @@
     height: 100%;
   }
   html {
-    background-color: var(--col-bg);
+    background: var(--col-bg);
+    background: var(--page-bg);
     color: var(--col-fg);
   }
 
