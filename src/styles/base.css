@@ -6,6 +6,7 @@
   html {
     background-color: var(--col-bg);
     background-image: var(--page-bg);
+    background-attachment: fixed;
     color: var(--col-fg);
   }
 
