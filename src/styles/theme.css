@@ -16,8 +16,8 @@
     --col-link-bg: #24233a;
     --col-link-shadow: #dedee0b3;
 
-    --col-brand-1: hsl(85, 55%, 51%);
-    --col-brand-2: hsl(205, 81%, 51%);
+    --col-brand-1: #8ec73d;
+    --col-brand-2: #1d93e7;
 
     --radius-1: 4px;
     --space-section-1: 0.9rem;
@@ -47,8 +47,8 @@
     --col-link-bg: #b9d2e7;
     --col-link-shadow: transparent;
 
-    --col-brand-1: hsl(105, 70%, 51%);
-    --col-brand-2: hsl(225, 96%, 51%);
+    --col-brand-1: #56da2b;
+    --col-brand-2: #0a46fa;
 
     --radius-1: 4px;
     --space-section-1: 0.9rem;
