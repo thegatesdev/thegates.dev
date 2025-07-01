@@ -1,13 +1,14 @@
 ---
 import BaseHead from "$part/BaseHead.astro";
 import Style from "$part/Style.astro";
+import type { HTMLAttributes } from "astro/types";
 
-interface Props {
+interface Props extends HTMLAttributes<"body"> {
   title: string;
   description: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, ...attrs } = Astro.props;
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ const { title, description } = Astro.props;
     <slot name="head" />
     <Style />
   </head>
-  <body>
+  <body {...attrs}>
     <slot />
   </body>
 </html>
