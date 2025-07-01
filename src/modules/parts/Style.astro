@@ -1,0 +1,16 @@
+---
+import "$style/reset.css";
+import "$style/theme.css";
+import "$style/font.css";
+import "$style/base.css";
+import "$style/layouts.css";
+import "$style/components.css";
+---
+
+<script is:inline>
+  document.documentElement.dataset.theme =
+    localStorage?.getItem("theme") ??
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+</script>

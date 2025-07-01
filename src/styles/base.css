@@ -1,0 +1,42 @@
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+  html {
+    background-color: var(--col-bg);
+    color: var(--col-fg);
+  }
+
+  a {
+    color: var(--col-link-fg);
+    display: inline-block;
+  }
+
+  a:visited {
+    color: var(--col-link-fg-visit);
+  }
+
+  a[href]:hover,
+  a[href]:focus-visible {
+    background-color: var(--col-link-bg);
+  }
+
+  a:not([href]) {
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+  small {
+    color: var(--col-fg-fade-2);
+  }
+
+  i {
+    font-style: normal;
+    color: var(--col-fg-fade-3);
+  }
+
+  code {
+    background-color: var(--col-bg-fade-1);
+  }
+}

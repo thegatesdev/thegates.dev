@@ -1,0 +1,60 @@
+@layer font {
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+
+  h6 {
+    font-size: 1.075rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--col-fg-fade-1);
+  }
+}

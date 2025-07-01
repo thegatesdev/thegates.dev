@@ -1,0 +1,51 @@
+@layer theme {
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --col-fg: #dedee0;
+    --col-fg-active: #ffffff;
+    --col-fg-fade-1: #c0c0c2;
+    --col-fg-fade-2: #a2a2a4;
+    --col-fg-fade-3: #48484a;
+    --col-bg: #0b0b0d;
+    --col-bg-fade-1: #29292b;
+
+    --col-link-fg: #7192ff;
+    --col-link-fg-visit: #7cb1d2;
+    --col-link-bg: #24233a;
+    --col-link-shadow: #dedee0b3;
+
+    --radius-1: 4px;
+    --space-section-1: 0.9rem;
+    --space-section-2: 1.2rem;
+    --space-comp-1: 0.4rem;
+    --space-comp-2: 0.7rem;
+    --space-comp-3: 1rem;
+    --space-comp-4: 1.3rem;
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+
+    --col-fg: #0b0b0d;
+    --col-fg-active: #000;
+    --col-fg-fade-1: #29292b;
+    --col-fg-fade-2:#474749;
+    --col-fg-fade-3:#a1a1a3;
+    --col-bg: #fff;
+    --col-bg-fade-1: #e1e1e1;
+
+    --col-link-fg: #1a4cff;
+    --col-link-fg-visit: #0f2dd2;
+    --col-link-bg: #e0ecff;
+    --col-link-shadow: transparent;
+
+    --radius-1: 4px;
+    --space-section-1: 0.9rem;
+    --space-section-2: 1.2rem;
+    --space-comp-1: 0.4rem;
+    --space-comp-2: 0.7rem;
+    --space-comp-3: 1rem;
+    --space-comp-4: 1.3rem;
+  }
+}
