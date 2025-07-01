@@ -1,5 +1,74 @@
 ---
+import Refer from "$comp/Refer.astro";
 import Base from "$layout/Base.astro";
+import IconGithub from "$icon/github.svg";
+import IconYouTube from "$icon/youtube.svg";
 ---
 
-<Base title="thegates.dev" description="Homepage of thegatesdev" />
+<Base
+  class="page-index"
+  title="thegates.dev"
+  description="Homepage of thegatesdev"
+>
+  <header>
+    <ul class="page-index-navlist" role="list">
+      <Refer href="/">
+        <IconGithub slot="icon" />
+        GitHub
+      </Refer>
+      <Refer href="/">
+        <IconYouTube slot="icon" />
+        YouTube
+      </Refer>
+    </ul>
+  </header>
+  <main>
+    <h1 class="title">Tim</h1>
+    <p class="page-index-tag subtitle">@thegatesdev</p>
+    <q>In programming, fun and frustration are one</q>
+  </main>
+  <div class="page-index-below">
+    <div></div>
+    <nav><a href="/home">Continue &rarr;</a></nav>
+    <footer>
+      Built with <a href="">Astro</a> |
+      <a href="">Source</a>
+    </footer>
+  </div>
+</Base>
+
+<style is:global>
+  .page-index,
+  .page-index-below {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .page-index-below,
+  .page-index header {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  .page-index-navlist,
+  .page-index-below nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-index-tag {
+    color: transparent;
+    background-color: var(--col-fg);
+    background-image: linear-gradient(
+      45deg,
+      var(--col-brand-1),
+      var(--col-brand-2)
+    );
+    background-clip: text;
+  }
+  .page-index-below a {
+    color: var(--col-fg);
+  }
+</style>
