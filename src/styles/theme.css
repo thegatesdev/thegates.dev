@@ -52,6 +52,9 @@
   }
 
   :root {
+    --col-brand-1: #8fc73e;
+    --col-brand-2: #45a6ec;
+
     --page-bg: radial-gradient(var(--col-bg-fade-1) 0%, var(--col-bg) 100%);
   }
 }
