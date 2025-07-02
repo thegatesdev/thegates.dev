@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import PostCard from "./PostCard.astro";
+
+interface Props {
+  posts: CollectionEntry<"post">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ol class="post-list" role="list">
+  {
+    posts.map((post) => (
+      <li>
+        <PostCard {post} />
+      </li>
+    ))
+  }
+</ol>
+
+<style is:global>
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-section-1);
+  }
+</style>
