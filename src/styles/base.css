@@ -13,6 +13,7 @@
   a {
     color: var(--col-link-fg);
     display: inline-block;
+    text-decoration-style: dotted;
   }
 
   a:visited {
