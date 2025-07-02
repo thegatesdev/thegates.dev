@@ -1,0 +1,36 @@
+---
+import Header from "$part/Header.astro";
+import type { ComponentProps } from "astro/types";
+import Base from "./Base.astro";
+import Navigation from "$part/Navigation.astro";
+
+type Props = ComponentProps<typeof Base>;
+
+const attrs = Astro.props;
+---
+
+<Base class="page" {...attrs}>
+  <Header />
+  <div class="page-split">
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+  </div>
+  <footer></footer>
+</Base>
+
+<style is:global>
+  .page {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .page-split {
+    margin-top: var(--space-section-2);
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-section-3);
+  }
+</style>
