@@ -7,7 +7,7 @@
     padding: var(--space-comp-1);
 
     line-height: 1;
-    color: var(--col-fg);
+    color: var(--col-fg-fade-1);
     font-weight: bold;
     text-decoration: none;
   }
@@ -15,6 +15,9 @@
     fill: currentColor;
     width: 1em;
     height: auto;
+  }
+  .refer:hover {
+    color: var(--col-fg-active);
   }
 
   .page-index-tag,
