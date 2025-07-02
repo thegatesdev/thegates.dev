@@ -55,6 +55,7 @@
   .subtitle {
     font-size: 2rem;
     font-weight: 400;
+    text-align: center;
     color: var(--col-fg-fade-1);
   }
 }
