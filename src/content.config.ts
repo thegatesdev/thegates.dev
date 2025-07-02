@@ -9,7 +9,7 @@ const post = defineCollection({
     published: z.date(),
     updated: z.date().optional(),
     featured: z.number().int().optional(),
-    hidden: z.boolean().optional(),
+    special: z.boolean().optional(),
     topics: z.array(reference("topic")),
   }),
 });
