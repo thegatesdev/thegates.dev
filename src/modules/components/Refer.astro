@@ -12,23 +12,3 @@ const attrs = Astro.props;
     <slot />
   </a>
 </li>
-
-<style is:global>
-  .refer {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-comp-1);
-
-    padding: var(--space-comp-1);
-
-    line-height: 1;
-    color: var(--col-fg);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  .refer svg {
-    fill: currentColor;
-    width: 1em;
-    height: auto;
-  }
-</style>
