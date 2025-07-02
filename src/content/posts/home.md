@@ -4,6 +4,7 @@ description: Welcome to thegates.dev, my personal website!
 published: 2025-07-02
 updated: 2025-07-02
 topics: []
+featured: 1
 ---
 
 &#128075; Welcome to `thegates.dev`, my personal website! People usually call me Tim around here. Scarily generic, I know...
