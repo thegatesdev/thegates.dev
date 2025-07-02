@@ -32,10 +32,10 @@
   .navbutton {
     text-decoration: none;
     font-weight: bold;
-    color: var(--col-fg-fade-2);
+    color: var(--col-fg-fade-1);
     background: transparent;
   }
   .navbutton:hover {
-    color: var(--col-fg);
+    color: var(--col-fg-active);
   }
 }
