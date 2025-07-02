@@ -2,11 +2,11 @@
   :root[data-theme="dark"] {
     color-scheme: dark;
 
-    --col-fg: hsl(240, 3%, 78%);
+    --col-fg: #c5c5c9;
     --col-fg-active: #ffffff;
-    --col-fg-fade-1: #c0c0c2;
-    --col-fg-fade-2: #a2a2a4;
-    --col-fg-fade-3: #48484a;
+    --col-fg-fade-1: #a1a1a5;
+    --col-fg-fade-2: #7e7e81;
+    --col-fg-fade-3: #49494b;
     --col-bg: #0b0b0d;
     --col-bg-fade-1: #151517;
     --col-bg-fade-2: #29292b;
