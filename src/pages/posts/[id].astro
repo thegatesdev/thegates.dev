@@ -1,6 +1,5 @@
 ---
-import Base from "$layout/Base.astro";
-import Header from "$part/Header.astro";
+import Page from "$layout/Page.astro";
 import PostMeta from "$part/PostMeta.astro";
 import { getCollection, render } from "astro:content";
 
@@ -17,29 +16,17 @@ const { title, description } = post.data;
 const { Content } = await render(post);
 ---
 
-<Base class="page-post" name={title} {description}>
-  <Header />
-  <main>
-    <header>
-      <h1>{title}</h1>
-      <PostMeta {post} />
-    </header>
-    <div class="page-post-content">
-      <Content />
-    </div>
-  </main>
-  <footer></footer>
-</Base>
+<Page name={title} {description}>
+  <header>
+    <h1>{title}</h1>
+    <PostMeta {post} />
+  </header>
+  <div class="page-post-content">
+    <Content />
+  </div>
+</Page>
 
 <style is:global>
-  .page-post {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  .page-post main {
-    margin-top: var(--space-section-2);
-  }
   .page-post-content {
     margin-top: var(--space-section-3);
     display: flex;
