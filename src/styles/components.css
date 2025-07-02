@@ -16,4 +16,26 @@
     width: 1em;
     height: auto;
   }
+
+  .page-index-tag,
+  .header-tag {
+    color: transparent;
+    background-color: var(--col-fg);
+    background-image: linear-gradient(
+      45deg,
+      var(--col-brand-1),
+      var(--col-brand-2)
+    );
+    background-clip: text;
+  }
+
+  .navbutton {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--col-fg-fade-2);
+    background: transparent;
+  }
+  .navbutton:hover {
+    color: var(--col-fg);
+  }
 }
