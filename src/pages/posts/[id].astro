@@ -1,7 +1,7 @@
 ---
 import Page from "$layout/Page.astro";
-import PostMeta from "$part/PostMeta.astro";
-import { getCollection, render } from "astro:content";
+import PostContent from "$part/PostContent.astro";
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("post");
@@ -13,24 +13,8 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { title, description } = post.data;
-const { Content } = await render(post);
 ---
 
 <Page name={title} {description}>
-  <header>
-    <h1>{title}</h1>
-    <PostMeta {post} />
-  </header>
-  <div class="page-post-content">
-    <Content />
-  </div>
+  <PostContent {post} />
 </Page>
-
-<style is:global>
-  .page-post-content {
-    margin-top: var(--space-section-3);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-section-1);
-  }
-</style>
