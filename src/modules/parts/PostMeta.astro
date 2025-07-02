@@ -8,11 +8,12 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { published, updated, hidden } = post.data;
+const { published, updated, hidden, featured } = post.data;
 const topics = await getEntries(post.data.topics);
 ---
 
 <small class="post-meta">
+  {featured && <span>&#10024;Featured</span>}
   <span>Published on <DateDisplay date={published} /></span>
   {
     updated && (
@@ -23,17 +24,16 @@ const topics = await getEntries(post.data.topics);
   }
   <span
     >Topics:
-    {
-      topics.map((topic) => (
-        <a href={`/topics/${topic.id}`}>{topic.id}</a>
-      ))
-    }
+    {topics.map((topic) => <a href={`/topics/${topic.id}`}>{topic.id}</a>)}
   </span>
-  {hidden && "Hidden"}
+  {hidden && <span>Hidden</span>}
 </small>
 
 <style is:global>
-  .post-meta > * + * {
-    margin-left: var(--space-comp-2);
+  .post-meta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: var(--space-comp-2);
   }
 </style>
