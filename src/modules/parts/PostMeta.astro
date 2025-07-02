@@ -1,0 +1,39 @@
+---
+import DateDisplay from "$comp/DateDisplay.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntries } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"post">;
+}
+
+const { post } = Astro.props;
+const { published, updated, hidden } = post.data;
+const topics = await getEntries(post.data.topics);
+---
+
+<small class="post-meta">
+  <span>Published on <DateDisplay date={published} /></span>
+  {
+    updated && (
+      <span>
+        Updated on <DateDisplay date={updated} />
+      </span>
+    )
+  }
+  <span
+    >Topics:
+    {
+      topics.map((topic) => (
+        <a href={`/topics/${topic.id}`}>{topic.id}</a>
+      ))
+    }
+  </span>
+  {hidden && "Hidden"}
+</small>
+
+<style is:global>
+  .post-meta > * + * {
+    margin-left: var(--space-comp-2);
+  }
+</style>
