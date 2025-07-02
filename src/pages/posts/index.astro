@@ -1,0 +1,19 @@
+---
+import Page from "$layout/Page.astro";
+import PostList from "$part/PostList.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("post")).sort(
+  (a, b) => {
+    const featured = (b.data.featured ?? 0) - (a.data.featured ?? 0);
+    const time = b.data.published.getTime() - a.data.published.getTime();
+    return featured || time;
+  },
+);
+---
+
+<Page name="All Posts" description="View all posts by thegatesdev">
+  <h1>All Posts</h1>
+  <br>
+  <PostList {posts} />
+</Page>
