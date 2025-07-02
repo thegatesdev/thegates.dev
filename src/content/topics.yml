@@ -1,0 +1,6 @@
+- id: blog
+  post: home
+  related: []
+- id: art
+  post: home
+  related: []
