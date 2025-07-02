@@ -25,6 +25,10 @@
     background-color: var(--col-link-bg);
   }
 
+  a[href][aria-current=page] {
+    text-decoration-style: solid;
+  }
+
   a:not([href]) {
     cursor: not-allowed;
     text-decoration: line-through;
