@@ -1,0 +1,23 @@
+<header class="header">
+  <a class="navbutton" href="/"><h2 class="header-tag">@thegatesdev</h2></a>
+  <nav>
+    <ol class="header-nav-list" role="list">
+      <li><a class="navbutton" href="/posts">Posts</a></li>
+    </ol>
+  </nav>
+</header>
+
+<style is:global>
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-comp-1);
+
+    border-bottom: 1px solid var(--col-fg-fade-3);
+  }
+  .header-tag {
+    line-height: 1.6;
+  }
+</style>
