@@ -4,11 +4,12 @@ import Style from "$part/Style.astro";
 import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"body"> {
-  title: string;
+  name: string;
   description: string;
 }
 
-const { title, description, ...attrs } = Astro.props;
+const { name, description, ...attrs } = Astro.props;
+const title = `${name} | thegatesdev`;
 ---
 
 <html lang="en">
