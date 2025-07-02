@@ -11,13 +11,14 @@
     --col-bg-fade-1: #151517;
     --col-bg-fade-2: #29292b;
 
-    --col-link-fg: #7192ff;
-    --col-link-fg-visit: #7cb1d2;
+    --col-link-fg: var(--col-brand-2);
+    --col-link-fg-visit: var(--col-brand-2-light);
     --col-link-bg: #24233a;
     --col-link-shadow: #dedee0b3;
 
     --col-brand-1: #8ec73d;
     --col-brand-2: #1d93e7;
+    --col-brand-2-light: #4fcff3;
 
     --radius-1: 4px;
     --space-section-1: 0.9rem;
