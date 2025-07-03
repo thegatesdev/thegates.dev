@@ -1,0 +1,42 @@
+---
+import Base from "$layout/Base.astro";
+---
+
+<Base class="page-void" name="404" description="The page could not be found">
+  <header>
+    <h1 class="title">404</h1>
+    <p>That means the page or resource can not be found here!</p>
+  </header>
+  <main>
+    <details>
+      <summary>I expected something here</summary>
+      I probably messed up. Tell me about it.<br />
+      I mean, really do tell me about it,
+      preferably over on the
+      <a href="https://github.com/thegatesdev/thegates.dev/issues"
+        >GitHub issue tracker</a
+      >.
+    </details>
+    <details>
+      <summary>Pineapple goes on pizza</summary>
+      Just don't be a picky eater.
+    </details>
+  </main>
+</Base>
+
+<style is:global>
+  .page-void {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-section-2);
+  }
+  .page-void header {
+    margin-top: 40vh;
+  }
+</style>
