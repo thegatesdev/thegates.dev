@@ -2,6 +2,7 @@
 title: About Me
 description: Talking about myself is hard, but I guess that's what this website is for...
 published: 2025-07-03
+updated: 2025-07-03
 tags:
   - about
 featured: 2
