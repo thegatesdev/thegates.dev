@@ -24,7 +24,7 @@ const posts = (await getCollection("post", viewPostsWithTagFilter(tag))).sort(
   name={`Tag #${tag.id}`}
   description={`View posts with the #${tag.id} tag from thegatesdev`}
 >
-  <h1>#{tag.id}</h1>
+  <h2>#{tag.id}</h2>
   {description && <p>{description}</p>}
   {
     posts.length > 0 ? (
