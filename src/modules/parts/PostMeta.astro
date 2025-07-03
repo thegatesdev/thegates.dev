@@ -16,10 +16,12 @@ const tags = tagsRef && (await getEntries(tagsRef));
 
 <small class="post-meta-dates">
   {
-    published && (
+    published ? (
       <span>
         Published on <DateDisplay date={published} />
       </span>
+    ) : (
+      <span>Not published</span>
     )
   }
   {
