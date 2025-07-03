@@ -40,4 +40,9 @@ const {name, description, ...attrs} = Astro.props;
     flex-direction: column;
     gap: var(--space-section-1);
   }
+  @media screen and (max-width: 768px) {
+    .page-split {
+      flex-direction: column;
+    }
+  }
 </style>

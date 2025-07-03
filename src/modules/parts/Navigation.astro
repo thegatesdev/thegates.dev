@@ -24,4 +24,11 @@ import NavLink from "$comp/NavLink.astro";
     text-align: right;
     min-width: max-content;
   }
+  @media screen and (max-width: 768px) {
+    .navigation {
+      text-align: left;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 </style>
