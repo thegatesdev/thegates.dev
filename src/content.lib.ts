@@ -23,9 +23,9 @@ export function viewTagSort(a: Tag, b: Tag) {
   return a.id.localeCompare(b.id);
 }
 
-export function viewPostsWithTagFilter({id}: Tag) {
-  return ({data}: Post) => {
-    if (data.tags === undefined) return;
-    return data.tags.find((tag) => id === tag.id);
+export function viewPostsWithTagFilter({ id }: Tag) {
+  return (post: Post) => {
+    if (!viewPostFilter(post) || post.data.tags === undefined) return false;
+    return post.data.tags.find((tag) => id === tag.id);
   };
 }
