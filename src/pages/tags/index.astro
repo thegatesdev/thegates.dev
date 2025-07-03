@@ -1,0 +1,20 @@
+---
+import Page from "$layout/Page.astro";
+import { getCollection } from "astro:content";
+import { viewTagSort } from "src/content.lib";
+
+const tags = (await getCollection("tag")).sort(viewTagSort);
+---
+
+<Page name="All Tags" description="View all content tags by thegatesdev">
+  <h2>All Tags</h2>
+  <ul role="list">
+    {
+      tags.map((tag) => (
+        <li>
+          <a href={`/tags/${tag.id}`}>{`#${tag.id}`}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Page>
