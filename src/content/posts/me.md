@@ -53,8 +53,9 @@ Hopefully sharing creations will make the process more fun.
 えーとー、こんにちは
 
 That's what I would say if I was in Japan in the year was 2030.
-Japanese is so much fun, I love how the language sounds.
-The culture is also great-- for autistic people.
+To achieve that goal, listening to podcasts and going through a textbook will have to do for now.
+The Japanese language is so much fun, I love the usage of intonation and the sounds of the words.
+Don't forget the great culture-- especially for autistic people.
 
 *虹」は私の好きな言葉。*
 
