@@ -2,7 +2,7 @@
   body {
     font-family: system-ui, sans-serif;
     line-height: 1.5;
-    font-size: 1.2rem;
+    font-size: 1.075rem;
   }
 
   h1,
@@ -15,7 +15,6 @@
   }
 
   h6 {
-    font-size: 1.075rem;
     font-weight: 300;
     font-style: italic;
   }
