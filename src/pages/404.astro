@@ -21,7 +21,18 @@ import Base from "$layout/Base.astro";
       Just don't be a picky eater.
     </details>
   </main>
+  <nav>
+    <a href="/">Home</a><br />
+    <a id="404-back">Take me back</a>
+  </nav>
 </Base>
+
+<script>
+  const { pathname } = new URL(window.location.href);
+  const back = document.getElementById("404-back") as HTMLAnchorElement;
+  if (pathname.startsWith("post", 1)) back.href = "/posts";
+  else if (pathname.startsWith("tag", 1)) back.href = "/tags";
+</script>
 
 <style is:global>
   .page-void {
