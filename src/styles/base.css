@@ -38,11 +38,6 @@
     color: var(--col-fg-fade-2);
   }
 
-  i {
-    font-style: normal;
-    color: var(--col-fg-fade-3);
-  }
-
   code {
     background-color: var(--col-bg-fade-2);
   }
