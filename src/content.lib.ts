@@ -9,14 +9,13 @@ export function viewPostFilter(post: Post) {
 }
 
 function timeOrZero(date: Date | undefined): number {
-  return date ? date.getTime() : 0;
+  return date?.getTime() ?? 0;
 }
 
 export function viewPostSort(a: Post, b: Post) {
-  const featured = a.data.featured - b.data.featured;
-  if (featured !== 0) return featured;
-  const time = timeOrZero(b.data.published) - timeOrZero(a.data.published);
-  return time;
+  const featured = (a.data.featured ?? 1e9) - (b.data.featured ?? 1e9);
+  const date = timeOrZero(b.data.published) - timeOrZero(a.data.published);
+  return featured || date;
 }
 
 export function viewTagSort(a: Tag, b: Tag) {
