@@ -1,9 +1,12 @@
 @layer base {
-  html {
+  html,
+  body {
     height: 100%;
   }
-  body {
-    min-height: 100%;
+  html {
+    overflow: hidden scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--col-fg-fade-1) var(--col-bg-fade-2);
   }
   html {
     background-color: var(--col-bg);
@@ -27,7 +30,7 @@
     background-color: var(--col-link-bg);
   }
 
-  a[href][aria-current=page] {
+  a[href][aria-current="page"] {
     text-decoration-style: solid;
   }
 
