@@ -6,6 +6,8 @@ updated: 2025-07-03
 tags:
   - about
 featured: 1
+next:
+  - me
 ---
 
 &#128075; Welcome to `thegates.dev`, my personal website! People usually call me Tim around here. Scarily generic, I know...

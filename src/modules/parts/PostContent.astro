@@ -2,14 +2,18 @@
 import type { CollectionEntry } from "astro:content";
 import PostMeta from "./PostMeta.astro";
 import { render } from "astro:content";
+import { getEntries } from "astro:content";
+import SmallPostList from "./SmallPostList.astro";
 
 interface Props {
   post: CollectionEntry<"post">;
 }
 
 const { post } = Astro.props;
-const { title } = post.data;
+const { title, next: nextRef } = post.data;
 const { Content } = await render(post);
+
+const next = nextRef && (await getEntries(nextRef));
 ---
 
 <header>
@@ -17,3 +21,11 @@ const { Content } = await render(post);
   <PostMeta {post} />
 </header>
 <Content />
+{
+  next && (
+    <section>
+      <h4>Next up:</h4>
+      <SmallPostList posts={next} />
+    </section>
+  )
+}

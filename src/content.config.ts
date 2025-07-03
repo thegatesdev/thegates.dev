@@ -10,6 +10,7 @@ const post = defineCollection({
     updated: z.date().optional(),
     featured: z.number().int().optional(),
     tags: z.array(reference("tag")).optional(),
+    next: z.array(reference("post")).optional(),
   }),
 });
 
