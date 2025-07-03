@@ -11,11 +11,18 @@ const { posts } = Astro.props;
 
 <ol class="post-list" role="list">
   {
-    posts.map((post) => (
-      <li>
-        <PostCard {post} />
-      </li>
-    ))
+    posts.length > 0 ? (
+      posts.map((post) => (
+        <li>
+          <PostCard {post} />
+        </li>
+      ))
+    ) : (
+      <span>
+        <p>There are no posts here!</p>
+        <i>Choose wisely with what you fill the void.</i>
+      </span>
+    )
   }
 </ol>
 
