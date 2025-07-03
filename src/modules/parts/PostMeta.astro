@@ -2,20 +2,26 @@
 import DateDisplay from "$comp/DateDisplay.astro";
 import type { CollectionEntry } from "astro:content";
 import { getEntries } from "astro:content";
+import TagList from "./TagList.astro";
 
 interface Props {
   post: CollectionEntry<"post">;
 }
 
 const { post } = Astro.props;
-const { published, updated, special, featured } = post.data;
-const topics = await getEntries(post.data.topics);
+const { published, updated, featured, tags: tagsRef } = post.data;
+
+const tags = tagsRef && (await getEntries(tagsRef));
 ---
 
-<small class="post-meta">
-  {special && <span>&#128064;Special</span>}
-  {featured && <span>&#10024;Featured</span>}
-  <span>Published on <DateDisplay date={published} /></span>
+<small class="post-meta-dates">
+  {
+    published && (
+      <span>
+        Published on <DateDisplay date={published} />
+      </span>
+    )
+  }
   {
     updated && (
       <span>
@@ -23,17 +29,23 @@ const topics = await getEntries(post.data.topics);
       </span>
     )
   }
-  <span
-    >Topics:
-    {topics.map((topic) => <a href={`/topics/${topic.id}`}>{topic.id}</a>)}
-  </span>
+</small>
+<small class="post-meta-other">
+  {featured && <span>&#10024;Featured</span>}
+  {tags && <TagList {tags} />}
 </small>
 
 <style is:global>
-  .post-meta {
+  .post-meta-dates,
+  .post-meta-other {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .post-meta-dates {
     column-gap: var(--space-comp-2);
+  }
+  .post-meta-other {
+    column-gap: var(--space-comp-1);
   }
 </style>

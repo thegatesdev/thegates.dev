@@ -6,37 +6,19 @@ const post = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    published: z.date(),
+    published: z.date().optional(),
     updated: z.date().optional(),
-    featured: z.number().int().optional(),
-    special: z.boolean().optional(),
-    topics: z.array(reference("topic")),
+    featured: z.number().int().default(0),
+    tags: z.array(reference("tag")).optional(),
   }),
 });
 
-const link = defineCollection({
-  loader: file("./src/content/links.yml"),
+const tag = defineCollection({
+  loader: file("./src/content/tags.yml"),
   schema: z.object({
-    title: z.string(),
-    url: z.string().url(),
-    description: z.string(),
+    description: z.string().optional(),
+    relatedRef: z.array(reference("tag")).optional(),
   }),
 });
 
-const topic = defineCollection({
-  loader: file("./src/content/topics.yml"),
-  schema: z.object({
-    post: reference("post"),
-    related: z.array(reference("topic")),
-  }),
-});
-
-const artwork = defineCollection({
-  loader: file("./src/content/artworks.yml"),
-  schema: z.object({
-    post: reference("post"),
-    images: z.string().url(),
-  }),
-});
-
-export const collections = { post, link, topic, artwork };
+export const collections = { post, tag };
