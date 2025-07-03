@@ -1,6 +1,8 @@
 ---
 title: Home
 description: Welcome to thegates.dev, my personal website!
+published: 2025-06-26
+updated: 2025-07-03
 tags:
   - about
 featured: 1
