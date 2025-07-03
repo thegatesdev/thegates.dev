@@ -41,4 +41,13 @@
   code {
     background-color: var(--col-bg-fade-2);
   }
+
+  summary {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  details[open] summary {
+    font-weight: bold;
+  }
 }
