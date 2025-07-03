@@ -31,7 +31,7 @@ const tags = tagsRef && (await getEntries(tagsRef));
   }
 </small>
 <small class="post-meta-other">
-  {featured && <span>&#10024;Featured</span>}
+  {featured && <i>&#10024;Featured</i>}
   {tags && <TagList {tags} />}
 </small>
 
