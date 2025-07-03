@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  posts: CollectionEntry<"post">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul role="list">
+  {
+    posts.map((post) => (
+      <li>
+        <a href={`/posts/${post.id}`}>&rarr; {post.data.title}</a>
+      </li>
+    ))
+  }
+</ul>
