@@ -13,7 +13,7 @@ function timeOrZero(date: Date | undefined): number {
 }
 
 export function viewPostSort(a: Post, b: Post) {
-  const featured = b.data.featured - a.data.featured;
+  const featured = a.data.featured - b.data.featured;
   if (featured !== 0) return featured;
   const time = timeOrZero(b.data.published) - timeOrZero(a.data.published);
   return time;
