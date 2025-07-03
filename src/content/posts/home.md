@@ -8,6 +8,7 @@ tags:
 featured: 1
 next:
   - me
+  - profiles
 ---
 
 &#128075; Welcome to `thegates.dev`, my personal website! People usually call me Tim around here. Scarily generic, I know...

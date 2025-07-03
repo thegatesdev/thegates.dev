@@ -6,6 +6,8 @@ updated: 2025-07-03
 tags:
   - about
 featured: 2
+next:
+  - profiles
 ---
 
 Well, I find it hard to talk about myself too much.
