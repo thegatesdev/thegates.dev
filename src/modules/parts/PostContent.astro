@@ -16,15 +16,4 @@ const { Content } = await render(post);
   <h1>{title}</h1>
   <PostMeta {post} />
 </header>
-<div class="post-content">
-  <Content />
-</div>
-
-<style is:global>
-  .post-content {
-    margin-top: var(--space-section-2);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-section-1);
-  }
-</style>
+<Content />
