@@ -8,7 +8,7 @@ const post = defineCollection({
     description: z.string(),
     published: z.date().optional(),
     updated: z.date().optional(),
-    featured: z.number().int().default(0),
+    featured: z.number().int().optional(),
     tags: z.array(reference("tag")).optional(),
   }),
 });
