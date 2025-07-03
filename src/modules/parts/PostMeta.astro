@@ -34,7 +34,7 @@ const tags = tagsRef && (await getEntries(tagsRef));
 </small>
 <small class="post-meta-other">
   {featured && <i>&#10024;Featured</i>}
-  {tags && <TagList {tags} />}
+  {tags ? <TagList {tags} /> : <span>No tags</span>}
 </small>
 
 <style is:global>
