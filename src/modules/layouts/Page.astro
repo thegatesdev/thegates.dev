@@ -6,14 +6,14 @@ import Navigation from "$part/Navigation.astro";
 
 type Props = ComponentProps<typeof Base>;
 
-const attrs = Astro.props;
+const {name, description, ...attrs} = Astro.props;
 ---
 
-<Base class="page" {...attrs}>
+<Base class="page" {name} {description}>
   <Header />
   <div class="page-split">
     <Navigation />
-    <main>
+    <main {...attrs}>
       <slot />
     </main>
   </div>
