@@ -1,0 +1,36 @@
+---
+import Page from "$layout/Page.astro";
+import PostList from "$part/PostList.astro";
+import { getCollection } from "astro:content";
+import { viewPostSort, viewPostsWithTagFilter } from "src/content.lib";
+
+export async function getStaticPaths() {
+  const tags = await getCollection("tag");
+  return tags.map((tag) => ({
+    params: { id: tag.id },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const { description } = tag.data;
+
+const posts = (await getCollection("post", viewPostsWithTagFilter(tag))).sort(
+  viewPostSort,
+);
+---
+
+<Page
+  name={`Tag #${tag.id}`}
+  description={`View posts with the #${tag.id} tag from thegatesdev`}
+>
+  <h1>#{tag.id}</h1>
+  {description && <p>{description}</p>}
+  {
+    posts.length > 0 ? (
+      <PostList {posts} />
+    ) : (
+      <i>No posts found with this tag!</i>
+    )
+  }
+</Page>
