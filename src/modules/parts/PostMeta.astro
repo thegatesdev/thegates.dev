@@ -6,9 +6,10 @@ import TagList from "./TagList.astro";
 
 interface Props {
   post: CollectionEntry<"post">;
+  showFeatured?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, showFeatured = false } = Astro.props;
 const { published, updated, featured, tags: tagsRef } = post.data;
 
 const tags = tagsRef && (await getEntries(tagsRef));
@@ -33,7 +34,7 @@ const tags = tagsRef && (await getEntries(tagsRef));
   }
 </small>
 <small class="post-meta-other">
-  {featured && <i>&#10024;Featured</i>}
+  {showFeatured && featured && <i>&#10024;Featured</i>}
   {tags ? <TagList {tags} /> : <span>No tags</span>}
 </small>
 
