@@ -1,13 +1,21 @@
 ---
 import Page from "$layout/Page.astro";
 import PostList from "$part/PostList.astro";
-import { getCollection } from "astro:content";
-import { viewPostFilter, viewPostSort } from "src/content.lib";
+import {
+  getViewablePosts,
+  sortPostsByFeatured,
+  sortPostsByPublished,
+  splitFeaturedNormalPosts,
+} from "src/content.lib";
 
-const posts = (await getCollection("post", viewPostFilter)).sort(viewPostSort);
+const [featured, normal] = splitFeaturedNormalPosts(await getViewablePosts());
+featured.sort(sortPostsByFeatured);
+normal.sort(sortPostsByPublished);
 ---
 
 <Page name="All Posts" description="View all posts by thegatesdev">
-  <h2>All Posts</h2>
-  <PostList {posts} />
+  <h3>&#10024;Featured</h3>
+  <PostList posts={featured} />
+  <h3>Recent</h3>
+  <PostList posts={normal} />
 </Page>

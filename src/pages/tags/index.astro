@@ -1,9 +1,9 @@
 ---
 import Page from "$layout/Page.astro";
-import { getCollection } from "astro:content";
-import { viewTagSort } from "src/content.lib";
+import { getTags, sortTagsByName } from "src/content.lib";
 
-const tags = (await getCollection("tag")).sort(viewTagSort);
+const tags = await getTags();
+tags.sort(sortTagsByName);
 ---
 
 <Page name="All Tags" description="View all content tags by thegatesdev">

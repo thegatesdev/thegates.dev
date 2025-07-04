@@ -2,7 +2,7 @@
 import Page from "$layout/Page.astro";
 import PostList from "$part/PostList.astro";
 import { getCollection } from "astro:content";
-import { viewPostSort, viewPostsWithTagFilter } from "src/content.lib";
+import { filterPostsByTag, getViewablePosts, sortPostsByPublished } from "src/content.lib";
 
 export async function getStaticPaths() {
   const tags = await getCollection("tag");
@@ -15,9 +15,8 @@ export async function getStaticPaths() {
 const { tag } = Astro.props;
 const { description } = tag.data;
 
-const posts = (await getCollection("post", viewPostsWithTagFilter(tag))).sort(
-  viewPostSort,
-);
+const posts = (await getViewablePosts()).filter(filterPostsByTag(tag));
+posts.sort(sortPostsByPublished);
 ---
 
 <Page
