@@ -6,7 +6,7 @@ import Navigation from "$part/Navigation.astro";
 
 type Props = ComponentProps<typeof Base>;
 
-const {name, description, ...attrs} = Astro.props;
+const { name, description, ...attrs } = Astro.props;
 ---
 
 <Base class="page" {name} {description}>
@@ -26,13 +26,15 @@ const {name, description, ...attrs} = Astro.props;
     margin: 0 auto;
     padding: 1rem;
     padding-bottom: 20vh;
-  }
-  .page-split {
-    margin-top: var(--space-section-3);
 
     display: flex;
+    flex-direction: column;
+    row-gap: var(--space-section-3);
+  }
+  .page-split {
+    display: flex;
     flex-direction: row;
-    gap: var(--space-section-3);
+    gap: var(--space-section-1) var(--space-section-3);
   }
   .page-split main {
     flex: 1;
@@ -44,6 +46,10 @@ const {name, description, ...attrs} = Astro.props;
   @media screen and (max-width: 768px) {
     .page-split {
       flex-direction: column;
+    }
+    .page {
+      padding: 0.3rem;
+      row-gap: var(--space-section-1);
     }
   }
 </style>
