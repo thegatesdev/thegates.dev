@@ -1,17 +1,25 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import PostMeta from "./PostMeta.astro";
+import { Picture } from "astro:assets";
 
 interface Props {
   post: CollectionEntry<"post">;
 }
 
 const { post } = Astro.props;
-const { title, description } = post.data;
+const { title, description, cover, coverAlt } = post.data;
 const href = `/posts/${post.id}`;
 ---
 
 <article class="post-card">
+  {
+    cover && (
+      <div class="post-card-banner">
+        <Picture src={cover} alt={coverAlt} layout="constrained" />
+      </div>
+    )
+  }
   <div class="post-card-content">
     <header>
       <a {href}><h3>{title}</h3></a>
@@ -21,17 +29,39 @@ const href = `/posts/${post.id}`;
       <p>{description}</p>
     </main>
   </div>
-  <div class="post-card-banner"></div>
 </article>
 
 <style is:global>
   .post-card {
-    padding: var(--space-comp-2);
     border: 1px solid var(--col-fg-fade-2);
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
   .post-card-content {
+    padding: var(--space-comp-2);
+    flex: 3;
+
     display: flex;
     flex-direction: column;
     gap: var(--space-comp-2);
+  }
+  .post-card-banner {
+    flex: 1;
+    aspect-ratio: 1/1;
+  }
+  .post-card-banner picture,
+  .post-card-banner img {
+    height: 100%;
+  }
+  @media screen and (max-width: 576px) {
+    .post-card {
+      flex-direction: column;
+    }
+    .post-card-banner {
+      flex: unset;
+      height: 5rem;
+    }
   }
 </style>
