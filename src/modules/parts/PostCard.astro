@@ -16,7 +16,13 @@ const href = `/posts/${post.id}`;
   {
     cover && (
       <div class="post-card-banner">
-        <Picture src={cover} alt={coverAlt} width={90} height={90} layout="constrained" />
+        <Picture
+          src={cover}
+          alt={coverAlt}
+          width={90}
+          height={90}
+          layout="constrained"
+        />
       </div>
     )
   }
@@ -63,6 +69,10 @@ const href = `/posts/${post.id}`;
     .post-card-banner {
       flex: unset;
       height: 5rem;
+      overflow: hidden;
+    }
+    .post-card-banner img {
+      filter: blur(2px);
     }
   }
 </style>
