@@ -4,13 +4,14 @@ import PostMeta from "./PostMeta.astro";
 import { render } from "astro:content";
 import { getEntries } from "astro:content";
 import SmallPostList from "./SmallPostList.astro";
+import { Picture } from "astro:assets";
 
 interface Props {
   post: CollectionEntry<"post">;
 }
 
 const { post } = Astro.props;
-const { title, next: nextRef } = post.data;
+const { title, next: nextRef, cover, coverAlt } = post.data;
 const { Content } = await render(post);
 
 const next = nextRef && (await getEntries(nextRef));
@@ -20,6 +21,13 @@ const next = nextRef && (await getEntries(nextRef));
   <h1>{title}</h1>
   <PostMeta {post} showFeatured={true} />
 </header>
+{
+  cover && (
+    <div class="post-content-image">
+      <Picture src={cover} alt={coverAlt} layout="constrained" />
+    </div>
+  )
+}
 <Content />
 {
   next && (
@@ -29,3 +37,12 @@ const next = nextRef && (await getEntries(nextRef));
     </section>
   )
 }
+
+<style is:global>
+  .post-content-image {
+    aspect-ratio: 1/1;
+  }
+  .post-content-image img {
+    height: 100%;
+  }
+</style>
