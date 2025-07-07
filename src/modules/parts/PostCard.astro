@@ -13,6 +13,15 @@ const href = `/posts/${post.id}`;
 ---
 
 <article class="post-card">
+  <div class="post-card-content">
+    <header>
+      <a {href}><h3>{title}</h3></a>
+      <PostMeta {post} />
+    </header>
+    <main>
+      <p>{description}</p>
+    </main>
+  </div>
   {
     cover && (
       <div class="post-card-banner">
@@ -26,19 +35,11 @@ const href = `/posts/${post.id}`;
       </div>
     )
   }
-  <div class="post-card-content">
-    <header>
-      <a {href}><h3>{title}</h3></a>
-      <PostMeta {post} />
-    </header>
-    <main>
-      <p>{description}</p>
-    </main>
-  </div>
 </article>
 
 <style is:global>
   .post-card {
+    padding: var(--space-comp-2);
     border: 1px solid var(--col-fg-fade-2);
 
     display: flex;
@@ -46,7 +47,6 @@ const href = `/posts/${post.id}`;
     flex-direction: row;
   }
   .post-card-content {
-    padding: var(--space-comp-2);
     flex: 3;
 
     display: flex;
@@ -64,7 +64,11 @@ const href = `/posts/${post.id}`;
   }
   @media screen and (max-width: 576px) {
     .post-card {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      padding: 0;
+    }
+    .post-card-content {
+      padding: var(--space-comp-2);
     }
     .post-card-banner {
       flex: unset;
