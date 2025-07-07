@@ -12,18 +12,24 @@ const href = `/posts/${post.id}`;
 ---
 
 <article class="post-card">
-  <header>
-    <a {href}><h3>{title}</h3></a>
-    <PostMeta {post} />
-  </header>
-  <p>{description}</p>
+  <div class="post-card-content">
+    <header>
+      <a {href}><h3>{title}</h3></a>
+      <PostMeta {post} />
+    </header>
+    <main>
+      <p>{description}</p>
+    </main>
+  </div>
+  <div class="post-card-banner"></div>
 </article>
 
 <style is:global>
   .post-card {
     padding: var(--space-comp-2);
     border: 1px solid var(--col-fg-fade-2);
-
+  }
+  .post-card-content {
     display: flex;
     flex-direction: column;
     gap: var(--space-comp-2);
