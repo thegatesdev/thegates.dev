@@ -16,7 +16,7 @@ const href = `/posts/${post.id}`;
   {
     cover && (
       <div class="post-card-banner">
-        <Picture src={cover} alt={coverAlt} layout="constrained" />
+        <Picture src={cover} alt={coverAlt} width={90} height={90} layout="constrained" />
       </div>
     )
   }
@@ -54,6 +54,7 @@ const href = `/posts/${post.id}`;
   .post-card-banner picture,
   .post-card-banner img {
     height: 100%;
+    width: 100%;
   }
   @media screen and (max-width: 576px) {
     .post-card {
