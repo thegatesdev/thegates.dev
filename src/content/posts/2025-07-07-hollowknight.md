@@ -1,7 +1,7 @@
 ---
 title: "Drawing: Hollow Knight PFP"
 description: A drawing of the knight from Hollow Knight for a friend.
-cover: "$img/2025-07-07-hollowknight.png"
+cover: "$img/2025-07-07-hollowknight.jpg"
 coverAlt: The Knight from Hollow Knight lunging towards the viewer, in the background lots of sparkles and the Shade of the Knight.
 published: 2025-07-07
 updated: 2025-07-07
