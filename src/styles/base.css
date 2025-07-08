@@ -55,4 +55,8 @@
   details[open] summary {
     font-weight: bold;
   }
+
+  hr {
+    border-color: var(--col-fg-fade-3);
+  }
 }
