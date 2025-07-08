@@ -21,8 +21,8 @@
     --col-brand-2-light: #36B1ED;
 
     --radius-1: 4px;
-    --space-section-1: 0.9rem;
-    --space-section-2: 1.2rem;
+    --space-section-1: 1.2rem;
+    --space-section-2: 1.5rem;
     --space-section-3: 1.8rem;
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
@@ -53,9 +53,9 @@
     --col-brand-2: #0a46fa;
 
     --radius-1: 4px;
-    --space-section-1: 0.9rem;
-    --space-section-2: 1.2rem;
-    --space-section-3: 1.5rem;
+    --space-section-1: 1.2rem;
+    --space-section-2: 1.5rem;
+    --space-section-3: 1.8rem;
     --space-comp-1: 0.4rem;
     --space-comp-2: 0.7rem;
     --space-comp-3: 1rem;
