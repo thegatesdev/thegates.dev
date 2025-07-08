@@ -14,7 +14,7 @@ This is a drawing of a sleepy seal, made some time ago for no apparent reason.
 There's a few things I like about it.
 The shape is exactly what I was going for,
 although he's probably fatter than a normal seal
-(I didn't a reference making this).
+(I wasn't using a reference).
 I'm also impressed by the matching perspective of the seal and the box.
 Two other nice parts are the face and the fish.
 The whiskers and eye look really cute,
