@@ -6,9 +6,7 @@ type Props = HTMLAttributes<"a">;
 const attrs = Astro.props;
 ---
 
-<li>
-  <a class="refer" {...attrs}>
-    <slot name="icon" />
-    <slot />
-  </a>
-</li>
+<a class="link-button" {...attrs}>
+  <slot name="icon" />
+  <slot />
+</a>

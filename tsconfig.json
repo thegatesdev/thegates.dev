@@ -8,10 +8,8 @@
     "paths": {
       "$icon/*": ["src/media/icons/*"],
       "$img/*": ["src/media/images/*"],
-      "$comp/*": ["src/modules/components/*"],
-      "$layout/*": ["src/modules/layouts/*"],
-      "$part/*": ["src/modules/parts/*"],
-      "$page/*": ["src/pages/*"],
+      "$mod/*": ["src/modules/*"],
+      "$layout/*": ["src/layouts/*"],
       "$style/*": ["src/styles/*"]
     }
   }
