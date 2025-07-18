@@ -14,4 +14,10 @@ export default defineConfig({
   build: {
     concurrency: 2,
   },
+  experimental: {
+    rawEnvValues: true,
+    clientPrerender: true,
+    contentIntellisense: true,
+    headingIdCompat: true,
+  }
 });
