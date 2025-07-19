@@ -6,28 +6,26 @@
     height: 100%;
     overflow: hidden scroll;
     scrollbar-width: thin;
-    scrollbar-color: var(--col-fg-fade-1) var(--col-bg-fade-2);
-  }
-  html {
-    background-color: var(--col-bg);
-    background-image: var(--page-bg);
+    scrollbar-color: var(--lightest) var(--darkest);
+    background-color: var(--bg-1);
+    background-image: var(--canvas);
     background-attachment: fixed;
-    color: var(--col-fg);
+    color: var(--fg-1);
   }
 
   a {
-    color: var(--col-link-fg);
+    color: var(--link);
     display: inline-block;
     text-decoration-style: dotted;
   }
 
   a:visited {
-    color: var(--col-link-fg-visit);
+    color: var(--link-visit);
   }
 
   a[href]:hover,
   a[href]:focus-visible {
-    background-color: var(--col-link-bg);
+    background-color: var(--link-box);
   }
 
   a[href][aria-current="page"] {
@@ -40,23 +38,32 @@
   }
 
   small {
-    color: var(--col-fg-fade-2);
+    color: var(--fg-3);
   }
 
-  code {
-    background-color: var(--col-bg-fade-2);
+  code,
+  var,
+  samp,
+  blockquote {
+    background-color: var(--bg-3);
   }
 
-  summary {
-    user-select: none;
-    cursor: pointer;
+  kbd {
+    background-color: var(--darkish);
+    border: 1px solid var(--fg-1);
+    border-radius: var(--round-1);
+    box-shadow:
+      0 1px 1px var(--darkest),
+      0 2px 0 0 var(--lightish) inset;
+
+    padding: 2px 4px;
   }
 
-  details[open] summary {
-    font-weight: bold;
+  blockquote {
+    border-left: 10px solid var(--bg-4);
   }
 
   hr {
-    border-color: var(--col-fg-fade-3);
+    border-color: var(--bg-4);
   }
 }

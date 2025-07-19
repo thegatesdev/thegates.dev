@@ -5,28 +5,53 @@
     font-size: 1.075rem;
   }
 
+  code,
+  samp,
+  kbd {
+    font-family:
+      ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+      "DejaVu Sans Mono", monospace;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
-    line-height: 1.1;
+  h6,
+  address,
+  blockquote,
+  dl,
+  ol,
+  p,
+  pre,
+  table,
+  ul {
+    margin-bottom: 1rem;
   }
 
   h6 {
+    font-size: 1rem;
     font-weight: 300;
     font-style: italic;
+    line-height: 1.4;
   }
 
   h5 {
     font-size: 1.1rem;
     font-weight: 300;
+    line-height: 1.3;
   }
 
   h4 {
     font-size: 1.4rem;
     font-weight: 300;
+    line-height: 1.2;
+  }
+
+  h2,
+  h3 {
+    line-height: 1.1;
   }
 
   h3 {
@@ -42,18 +67,6 @@
   h1 {
     font-size: 2.3rem;
     font-weight: 500;
-  }
-
-  .title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
-    color: var(--col-fg-fade-1);
+    line-height: 1;
   }
 }
