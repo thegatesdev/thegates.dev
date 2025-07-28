@@ -1,9 +1,11 @@
 ---
-interface Props {
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"time"> {
   date: Date;
 }
 
-const { date } = Astro.props;
+const { date, ...attrs } = Astro.props;
 const options: Intl.DateTimeFormatOptions = {
   year: "numeric",
   month: "short",
@@ -12,4 +14,4 @@ const options: Intl.DateTimeFormatOptions = {
 const text = date.toLocaleDateString("en-US", options);
 ---
 
-<time>{text}</time>
+<time {...attrs}>{text}</time>
