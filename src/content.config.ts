@@ -15,7 +15,8 @@ const page = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    next: z.array(reference("page")).optional(),
+    next: reference("page").optional(),
+    previous: reference("page").optional(),
   }),
 });
 
