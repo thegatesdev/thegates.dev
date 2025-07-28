@@ -1,16 +1,16 @@
 ---
 interface Props {
-  title: string;
+  globalTitle: string;
   description: string;
 }
 
-const { title, description } = Astro.props;
+const { globalTitle, description } = Astro.props;
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content={Astro.generator} />
-<title>{title}</title>
+<title>{globalTitle}</title>
 <meta name="description" content={description}>
 <meta name="application-name" content="thegates.dev" />
 <meta name="author" content="thegatesdev" />

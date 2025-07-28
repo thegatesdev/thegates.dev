@@ -4,17 +4,17 @@ import BaseHead from "$mod/BaseHead.astro";
 import Style from "$mod/Style.astro";
 
 interface Props extends HTMLAttributes<"body"> {
-  name: string;
+  title: string;
   description: string;
 }
 
-const { name, description, ...attrs } = Astro.props;
-const title = `${name} | thegatesdev`;
+const { title, description, ...attrs } = Astro.props;
+const globalTitle = `${title} | thegatesdev`;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead {title} {description} />
+    <BaseHead {globalTitle} {description} />
     <slot name="head" />
     <Style />
   </head>
