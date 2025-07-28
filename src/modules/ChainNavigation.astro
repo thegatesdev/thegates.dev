@@ -3,7 +3,7 @@ import type { InternalLink } from "$lib";
 import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"nav"> {
-  title: string;
+  title?: string;
   previous?: InternalLink | undefined;
   next?: InternalLink | undefined;
 }
@@ -12,7 +12,7 @@ const { title, previous, next, ...attrs } = Astro.props;
 ---
 
 <nav {...attrs}>
-  {previous ? <a href={previous.url}>{previous.title}</a> : <span />}
-  {title}
-  {next ? <a href={next.url}>{next.title}</a> : <span />}
+  {previous ? <a href={previous.url}>&larr;{previous.title}</a> : <span />}
+  {title ? <small>{title}</small> : <span />}
+  {next ? <a href={next.url}>{next.title}&rarr;</a> : <span />}
 </nav>
