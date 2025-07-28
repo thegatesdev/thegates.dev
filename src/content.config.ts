@@ -1,5 +1,14 @@
 import { defineCollection, reference, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
+
+const link = defineCollection({
+  loader: file("./src/content/links.toml"),
+  schema: z.object({
+    name: z.string(),
+    url: z.string().url(),
+    author: z.string().optional(),
+  }),
+});
 
 const page = defineCollection({
   loader: glob({ base: "./src/content/pages", pattern: "**/*.{md,mdx}" }),
@@ -7,8 +16,8 @@ const page = defineCollection({
     title: z.string(),
     description: z.string(),
     next: z.array(reference("page")).optional(),
-  })
-})
+  }),
+});
 
 const post = defineCollection({
   loader: glob({ base: "./src/content/posts", pattern: "**/*.{md,mdx}" }),
@@ -28,4 +37,4 @@ const topic = defineCollection({
   }),
 });
 
-export const collections = { post, topic, page };
+export const collections = { link, page, post, topic };
