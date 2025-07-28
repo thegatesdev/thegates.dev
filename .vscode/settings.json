@@ -12,5 +12,8 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "astro.content-intellisense": true
+  "astro.content-intellisense": true,
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
 }
