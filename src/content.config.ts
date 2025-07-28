@@ -23,7 +23,8 @@ const post = defineCollection({
 const topic = defineCollection({
   loader: glob({ base: "./src/content/topics", pattern: "**/*.{md,mdx}" }),
   schema: z.object({
-    title: z.string(),
+    name: z.string(),
+    inline: z.string(),
   }),
 });
 
