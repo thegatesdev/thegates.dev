@@ -1,0 +1,13 @@
+---
+import type { ComponentProps } from "astro/types";
+import Base from "./Base.astro";
+
+type Props = ComponentProps<typeof Base>;
+
+const { title, description } = Astro.props;
+---
+
+<Base class="page" {title} {description}>
+  <h1>{title}</h1>
+  <slot />
+</Base>
