@@ -20,6 +20,7 @@ const next = nextRef && (await pageToLink(nextRef));
 ---
 
 <Layout {title} {description}>
+  <h1>{title}</h1>
   <Content />
   <hr />
   <ChainNavigation {title} {previous} {next} />
