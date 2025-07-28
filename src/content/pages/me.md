@@ -1,13 +1,13 @@
 ---
 title: About Me
 description: Talking about myself is hard, but I guess that's what this website is for...
-next:
-  - profiles
+previousRef: home
+nextRef: profiles
 ---
 
-Well, I find it hard to talk about myself too much.
-But, since that's what this website is about,
-here is some more general information.
+I am a software developer from The Netherlands.
+I write code as a hobby, for my studies, and to earn a living.
+Other pastime activities include playing Minecraft, making art and learning Japanese.
 
 ## The Programming side
 

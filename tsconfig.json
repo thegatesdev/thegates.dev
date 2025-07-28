@@ -10,7 +10,8 @@
       "$img/*": ["src/media/images/*"],
       "$mod/*": ["src/modules/*"],
       "$layout/*": ["src/layouts/*"],
-      "$style/*": ["src/styles/*"]
+      "$style/*": ["src/styles/*"],
+      "$lib": ["src/content.lib.ts"],
     }
   }
 }

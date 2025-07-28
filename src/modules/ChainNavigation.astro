@@ -1,0 +1,17 @@
+---
+import type { InternalLink } from "$lib";
+
+interface Props {
+  title: string;
+  previous?: InternalLink | undefined;
+  next?: InternalLink | undefined;
+}
+
+const { title, previous, next } = Astro.props;
+---
+
+<nav>
+  {previous ? <a href={previous.url}>{previous.title}</a> : <span />}
+  {title}
+  {next ? <a href={next.url}>{next.title}</a> : <span />}
+</nav>
