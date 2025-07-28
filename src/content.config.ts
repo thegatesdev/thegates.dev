@@ -15,8 +15,8 @@ const page = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    next: reference("page").optional(),
-    previous: reference("page").optional(),
+    nextRef: reference("page").optional(),
+    previousRef: reference("page").optional(),
   }),
 });
 
@@ -25,8 +25,8 @@ const post = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    topics: z.array(reference("topic")).optional(),
-    next: z.array(reference("post")).optional(),
+    topicsRef: z.array(reference("topic")).optional(),
+    nextRef: z.array(reference("post")).optional(),
   }),
 });
 
