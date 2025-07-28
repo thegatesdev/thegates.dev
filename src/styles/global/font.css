@@ -13,6 +13,9 @@
       "DejaVu Sans Mono", monospace;
   }
 
+  h1,
+  h2,
+  h3,
   address,
   blockquote,
   dl,
@@ -25,11 +28,9 @@
     margin-bottom: 1rem;
   }
 
-  h1,
   h2,
   h3 {
-    line-height: 1;
-    margin-bottom: 0.4rem;
+    line-height: 1.1;
   }
 
   h6 {
@@ -54,14 +55,9 @@
     margin-bottom: 0.5rem;
   }
 
-  h2,
-  h3 {
-    line-height: 1.1;
-  }
-
   h3 {
     font-size: 1.7rem;
-    font-weight: 350;
+    font-weight: 400;
   }
 
   h2 {
@@ -72,5 +68,6 @@
   h1 {
     font-size: 2.3rem;
     font-weight: 500;
+    line-height: 1;
   }
 }
