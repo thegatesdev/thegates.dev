@@ -1,9 +1,6 @@
 ---
 title: Profiles
 description: The internet is big, here's where you can find me.
-published: 2025-07-03
-tags:
-  - about
 ---
 
 The internet is big, here's where you can find me:
