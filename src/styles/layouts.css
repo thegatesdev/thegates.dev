@@ -1,5 +1,14 @@
-.page {
-  max-width: 50rem;
-  margin: 0 auto;
-  padding: 1rem 1rem;
+@layer layout {
+  .page {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }

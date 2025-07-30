@@ -1,0 +1,25 @@
+@layer modules {
+  @property --brand-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 45deg;
+  }
+
+  .header-title {
+    color: transparent;
+    background-color: var(--fg-1);
+    background-image: linear-gradient(
+      var(--brand-angle),
+      var(--brand-green),
+      var(--brand-blue)
+    );
+    background-clip: text;
+    transition: --brand-angle 1s ease-out;
+
+    line-height: 1.6;
+  }
+
+  .header-title:hover {
+    --brand-angle: 270deg;
+  }
+}
