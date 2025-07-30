@@ -1,8 +1,5 @@
 @layer theme {
   :root {
-    --brand-green: oklch(50.7% 0.238 131.355);
-    --brand-blue: oklch(50.7% 0.238 264.51);
-
     --round-1: 4px;
     --round-2: 8px;
 
@@ -11,6 +8,7 @@
     --space-3: 1rem;
     --space-4: 1.3rem;
   }
+
   :root[data-theme="dark"] {
     color-scheme: dark;
 
@@ -27,6 +25,9 @@
     --lightest: var(--fg-1);
     --darkish: var(--bg-2);
     --lightish: var(--fg-3);
+
+    --brand-green: oklch(70.7% 0.238 131.355);
+    --brand-blue: oklch(70.7% 0.238 264.51);
 
     --link: oklch(60% 0.3 260);
     --link-visit: oklch(40% 0.2 255);
@@ -51,6 +52,9 @@
     --lightest: var(--bg-1);
     --darkish: var(--bg-3);
     --lightish: var(--bg-2);
+
+    --brand-green: oklch(50.7% 0.238 131.355);
+    --brand-blue: oklch(50.7% 0.238 264.51);
 
     --link: oklch(40% 0.3 260);
     --link-visit: oklch(60% 0.2 255);
