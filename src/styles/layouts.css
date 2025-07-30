@@ -3,16 +3,3 @@
   margin: 0 auto;
   padding: 1rem 1rem;
 }
-
-.page footer {
-  position: sticky;
-  top: 100vh;
-}
-
-.page-chain-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  line-height: 1;
-}

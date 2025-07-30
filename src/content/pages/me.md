@@ -1,8 +1,6 @@
 ---
 title: About Me
 description: Talking about myself is hard, but I guess that's what this website is for...
-previousRef: home
-nextRef: profiles
 ---
 
 I am a software developer from The Netherlands.

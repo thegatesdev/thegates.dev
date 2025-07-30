@@ -1,8 +1,6 @@
 ---
 title: Profiles
 description: The internet is big, here's where you can find me.
-previousRef: me
-nextRef: trivia
 ---
 
 The internet is big, here's where you can find me:

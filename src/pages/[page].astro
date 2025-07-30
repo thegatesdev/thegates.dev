@@ -1,8 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "$layout/Page.astro";
-import { pageToLink } from "$lib";
-import ChainNavigation from "$mod/ChainNavigation.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("page");
@@ -13,20 +11,13 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { title, description, previousRef, nextRef } = page.data;
+const { title, description } = page.data;
 const { Content } = await render(page);
-const previous = previousRef && (await pageToLink(previousRef));
-const next = nextRef && (await pageToLink(nextRef));
 ---
 
 <Layout {title} {description}>
   <main>
     <h1>{title}</h1>
     <Content />
-    <br />
   </main>
-  <footer>
-    <hr />
-    <ChainNavigation class="page-chain-nav" {title} {previous} {next} />
-  </footer>
 </Layout>

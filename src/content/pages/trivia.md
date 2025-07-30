@@ -1,7 +1,6 @@
 ---
 title: Trivia
 description: Random facts and questions about me.
-previousRef: profiles
 ---
 
 Here are some random facts and questions about me.
