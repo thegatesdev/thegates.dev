@@ -1,11 +1,12 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "$layout/Page.astro";
+import { rootfulId } from "$lib";
 
 export async function getStaticPaths() {
   const pages = await getCollection("page");
   return pages.map((page) => ({
-    params: { page: page.id },
+    params: { page: rootfulId(page) },
     props: { page },
   }));
 }
