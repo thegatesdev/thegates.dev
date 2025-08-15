@@ -15,7 +15,7 @@ export default defineConfig({
     concurrency: 2,
   },
   experimental: {
-    rawEnvValues: true,
+    staticImportMetaEnv: true,
     clientPrerender: true,
     contentIntellisense: true,
     headingIdCompat: true,
