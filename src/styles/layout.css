@@ -4,11 +4,4 @@
     margin: 0 auto;
     padding: 1rem 1rem;
   }
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-  }
 }
