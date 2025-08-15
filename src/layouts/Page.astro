@@ -8,5 +8,7 @@ const { title, description } = Astro.props;
 ---
 
 <Base class="page" {title} {description}>
-  <slot />
+  <main>
+    <slot />
+  </main>
 </Base>
