@@ -11,7 +11,7 @@
     "lint:fix": "biome check --write ."
   },
   "dependencies": {
-    "astro": "^5.12.4",
+    "astro": "^5.13.2",
     "sharp": "^0.34.3"
   },
   "devDependencies": {
