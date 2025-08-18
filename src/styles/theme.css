@@ -24,7 +24,7 @@
 
     --darkest: var(--bg-2);
     --lightest: var(--fg-1);
-    --darkish: var(--bg-2);
+    --darkish: var(--bg-3);
     --lightish: var(--fg-3);
 
     --brand-green: oklch(70.7% 0.238 131.355);
