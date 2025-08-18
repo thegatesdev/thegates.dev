@@ -6,7 +6,7 @@
     height: 100%;
     overflow: hidden scroll;
     scrollbar-width: thin;
-    scrollbar-color: var(--lightest) var(--darkest);
+    scrollbar-color: var(--lightest) var(--darkish);
     background-color: var(--bg-1);
     background-image: var(--canvas);
     background-attachment: fixed;
