@@ -1,3 +1,10 @@
 @layer appearance {
+  :root {
+    --sep: 1px solid var(--fg-3);
+  }
 
+  .header-global {
+    background-color: var(--bg-2);
+    border-bottom: var(--sep);
+  }
 }
