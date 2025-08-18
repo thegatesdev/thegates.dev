@@ -7,6 +7,7 @@
     --space-2: 0.7rem;
     --space-3: 1rem;
     --space-4: 1.3rem;
+    --space-p: 1.6rem;
   }
 
   :root[data-theme="dark"] {
