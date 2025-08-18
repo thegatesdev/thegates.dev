@@ -7,9 +7,21 @@
     justify-content: space-between;
     gap: var(--space-2);
   }
+
+  .page,
+  .content-page {
+    display: flex;
+    flex-direction: column;
+  }
+
   .page {
-    max-width: 50rem;
+    gap: var(--space-3);
+  }
+
+  .content-page {
+    max-width: 40rem;
     margin: 0 auto;
-    padding: 1rem 1rem;
+
+    gap: var(--space-p);
   }
 }

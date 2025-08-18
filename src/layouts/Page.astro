@@ -1,5 +1,6 @@
 ---
 import type { ComponentProps } from "astro/types";
+import HeaderGlobal from "$mod/HeaderGlobal.astro";
 import Base from "./Base.astro";
 
 type Props = ComponentProps<typeof Base>;
@@ -8,7 +9,6 @@ const { title, description } = Astro.props;
 ---
 
 <Base class="page" {title} {description}>
-  <main>
-    <slot />
-  </main>
+  <HeaderGlobal />
+  <slot />
 </Base>
