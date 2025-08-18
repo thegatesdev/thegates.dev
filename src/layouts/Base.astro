@@ -1,6 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import BaseHead from "$mod/BaseHead.astro";
+import HeadBase from "$mod/HeadBase.astro";
 import Style from "$mod/Style.astro";
 
 interface Props extends HTMLAttributes<"body"> {
@@ -14,7 +14,7 @@ const globalTitle = `${title} | thegatesdev`;
 
 <html lang="en">
   <head>
-    <BaseHead {globalTitle} {description} />
+    <HeadBase {globalTitle} {description} />
     <slot name="head" />
     <Style />
   </head>
