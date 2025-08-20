@@ -1,11 +1,19 @@
+---
+import NavGlobal from "./NavGlobal.astro";
+import NameTag from "./NameTag.astro";
+import LinksGlobal from "./LinksGlobal.astro";
+---
+
 <header class="header-global">
-  <div>
-    <a class="header-title" href="/"><h2>@thegatesdev</h2></a>
+  <div class="push-center">
+    <a class="header-global-title" href="/"><NameTag /></a>
   </div>
-  <div>
-
-  </div>
-  <div>
-
+  <nav>
+    <NavGlobal />
+  </nav>
+  <div class="push-center">
+    <div class="header-global-right">
+      <LinksGlobal />
+    </div>
   </div>
 </header>

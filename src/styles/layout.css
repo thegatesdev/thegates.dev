@@ -1,11 +1,27 @@
 @layer layout {
   .header-global {
-    padding: var(--space-1) var(--space-2);
-
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: var(--space-2);
+  }
+
+  .header-global-right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .header-global-title,
+  .nav-global,
+  .header-global-right,
+  .links-global {
+    height: 100%;
+  }
+
+  .nav-global,
+  .links-global {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .page,

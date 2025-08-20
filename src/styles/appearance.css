@@ -7,4 +7,43 @@
     background-color: var(--bg-2);
     border-bottom: var(--sep);
   }
+
+  .header-global-title {
+    line-height: 1.2;
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;
+    --hover: var(--bg-3);
+    border-right: var(--sep);
+  }
+
+  .header-global-title,
+  .links-global,
+  .nav-global {
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .links-global {
+    border-left: var(--sep);
+  }
+
+  @property --gradient-angle {
+    syntax: '<angle>';
+    initial-value: 45deg;
+    inherits: false;
+  }
+
+  .name-tag {
+    color: transparent;
+    background-color: var(--fg-1);
+    background-image: linear-gradient(var(--gradient-angle),
+        var(--brand-green),
+        var(--brand-blue));
+    background-clip: text;
+    transition: --gradient-angle 1s ease-out;
+  }
+
+  .name-tag:hover {
+    --gradient-angle: 270deg;
+  }
 }

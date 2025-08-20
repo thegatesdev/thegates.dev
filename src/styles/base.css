@@ -25,7 +25,7 @@
 
   a[href]:hover,
   a[href]:focus-visible {
-    background-color: var(--link-box);
+    background-color: var(--hover, var(--link-box));
   }
 
   a[href][aria-current="page"] {
