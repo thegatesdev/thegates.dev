@@ -1,30 +1,48 @@
 @layer appearance {
   :root {
-    --sep: 1px solid var(--fg-3);
+    --sep-1: 1px solid var(--fg-3);
+    --sep-2: 1px solid var(--bg-4);
   }
 
   .header-global {
     background-color: var(--bg-2);
-    border-bottom: var(--sep);
-  }
-
-  .header-global-title {
-    line-height: 1.2;
-    font-size: 2rem;
-    font-weight: 400;
-    text-decoration: none;
-    --hover: var(--bg-3);
-    border-right: var(--sep);
+    border-bottom: var(--sep-1);
   }
 
   .header-global-title,
   .links-global,
-  .nav-global {
+  .nav-global a {
     padding: var(--space-1) var(--space-2);
   }
 
+  .header-global-title,
+  .nav-global {
+    line-height: 1.2;
+    font-weight: 400;
+    --decorate: none;
+    --hover: var(--bg-3);
+  }
+
+  .header-global-title {
+    font-size: 2rem;
+    border-right: var(--sep-1);
+  }
+
+  .nav-global a {
+    color: var(--fg-1);
+    font-size: 1.4rem;
+  }
+
+  .nav-global>* {
+    border-left: var(--sep-2);
+  }
+
+  .nav-global:last-child {
+    border-right: var(--sep-2);
+  }
+
   .links-global {
-    border-left: var(--sep);
+    border-left: var(--sep-1);
   }
 
   @property --gradient-angle {

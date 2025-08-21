@@ -12,7 +12,8 @@
   .header-global-title,
   .nav-global,
   .header-global-right,
-  .links-global {
+  .links-global,
+  .nav-global a {
     height: 100%;
   }
 
@@ -20,8 +21,12 @@
   .links-global {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .nav-global a,
+  .links-global li,
+  .header-global-title {
+    align-content: center;
   }
 
   .page,

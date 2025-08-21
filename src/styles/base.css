@@ -16,7 +16,7 @@
   a {
     color: var(--link);
     display: inline-block;
-    text-decoration-style: dotted;
+    text-decoration: var(--decorate, underline dotted);
   }
 
   a:visited {
