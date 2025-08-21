@@ -28,9 +28,13 @@
     border-right: var(--sep-1);
   }
 
+  .nav-global,
+  .links-global {
+    font-size: 1.4rem;
+  }
+
   .nav-global a {
     color: var(--fg-1);
-    font-size: 1.4rem;
   }
 
   .nav-global>* {
@@ -43,6 +47,22 @@
 
   .links-global {
     border-left: var(--sep-1);
+  }
+
+  .links-global a {
+    vertical-align: middle;
+    color: var(--fg-2);
+    background: none;
+  }
+
+  .links-global a:hover {
+    color: var(--fg-1);
+  }
+
+  .links-global svg {
+    fill: currentColor;
+    width: 1em;
+    height: auto;
   }
 
   @property --gradient-angle {
