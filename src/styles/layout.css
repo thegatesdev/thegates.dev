@@ -45,8 +45,9 @@
   }
 
   .content-page {
-    max-width: 40rem;
+    width: 40rem;
     margin: 0 auto;
+    padding: var(--space-4) 0 10vh 0;
 
     gap: var(--space-4);
   }
